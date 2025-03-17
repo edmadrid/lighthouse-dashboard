@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lighthouse Accessibility Dashboard</title>
+  <style>
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 20px; 
+      line-height: 1.5;
+    }
+    h1 { 
+      color: #333; 
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin-bottom: 30px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    th, td { 
+      border: 1px solid #ddd; 
+      padding: 12px; 
+      text-align: left; 
+    }
+    th { 
+      background-color: #f5f5f5; 
+      font-weight: 600;
+    }
+    .good { 
+      background-color: #0cce6b; 
+      color: white; 
+      font-weight: bold; 
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .average { 
+      background-color: #ffa400; 
+      color: white; 
+      font-weight: bold; 
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .poor { 
+      background-color: #ff4e42; 
+      color: white; 
+      font-weight: bold; 
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .issues-container {
+      margin-top: 10px;
+      display: none;
+      background-color: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 15px;
+    }
+    .issue { 
+      margin-bottom: 20px; 
+      padding: 15px; 
+      background-color: white; 
+      border-left: 4px solid #ff4e42; 
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .issue h4 { 
+      margin-top: 0; 
+      color: #333;
+    }
+    .issue p {
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .toggle-issues {
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+    .toggle-issues:hover {
+      background-color: #e9e9e9;
+    }
+    .url-link {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    .url-link:hover {
+      text-decoration: underline;
+    }
+    .summary-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .stats {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 15px;
+    }
+    .stat-card {
+      background: white;
+      padding: 15px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    .stat-label {
+      color: #666;
+      font-size: 14px;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+  <script>
+    function toggleIssues(urlId) {
+      const container = document.getElementById('issues-' + urlId);
+      const button = document.getElementById('button-' + urlId);
+      
+      if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'block';
+        button.textContent = 'Hide Issues';
+      } else {
+        container.style.display = 'none';
+        button.textContent = 'Show Issues';
+      }
+    }
+    
+    function expandAll() {
+      document.querySelectorAll('.issues-container').forEach(container => {
+        container.style.display = 'block';
+      });
+      document.querySelectorAll('.toggle-issues').forEach(button => {
+        button.textContent = 'Hide Issues';
+      });
+    }
+    
+    function collapseAll() {
+      document.querySelectorAll('.issues-container').forEach(container => {
+        container.style.display = 'none';
+      });
+      document.querySelectorAll('.toggle-issues').forEach(button => {
+        button.textContent = 'Show Issues';
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Lighthouse Accessibility Dashboard</h1>
+
+  <div class="stats">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Sites Tested</div>
+        <div class="stat-value">8</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Average Score</div>
+        <div class="stat-value"><span class="good">90</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Sites Passing (90+)</div>
+        <div class="stat-value">3</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Issues</div>
+        <div class="stat-value">16</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="summary-header">
+    <h2>Site Scores</h2>
+    <div>
+      <button onclick="expandAll()" class="toggle-issues">Expand All</button>
+      <button onclick="collapseAll()" class="toggle-issues">Collapse All</button>
+    </div>
+  </div>
+  
+  <table>
+    <tr>
+      <th>URL</th>
+      <th>Accessibility Score</th>
+      <th>Issues</th>
+      <th>Actions</th>
+    </tr>
+
+    <tr>
+      <td><a href="https://guides.library.columbia.edu/HIST-W3507" target="_blank" class="url-link">https://guides.library.columbia.edu/HIST-W3507</a></td>
+      <td><span class="average">82</span></td>
+      <td>4</td>
+      <td>
+        <button id="button-url-0" class="toggle-issues" onclick="toggleIssues('url-0')">Show Issues</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="issues-url-0" class="issues-container">
+  
+          <div class="issue">
+            <h4>`button`, `link`, and `menuitem` elements do not have accessible names.</h4>
+            <p>When an element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-name/).</p>
+      <p><strong>Examples:</strong></p><ul><li>... and 2 more</li></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+            <p>Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).</p>
+      <p><strong>Examples:</strong></p><ul><li>... and 5 more</li></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>ARIA IDs are not unique</h4>
+            <p>The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn more](https://web.dev/duplicate-id-aria/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>Image elements do not have `[alt]` attributes</h4>
+            <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://web.dev/image-alt/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+        </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <td><a href="https://guides.library.columbia.edu/HSEA-W4815" target="_blank" class="url-link">https://guides.library.columbia.edu/HSEA-W4815</a></td>
+      <td><span class="average">84</span></td>
+      <td>3</td>
+      <td>
+        <button id="button-url-1" class="toggle-issues" onclick="toggleIssues('url-1')">Show Issues</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="issues-url-1" class="issues-container">
+  
+          <div class="issue">
+            <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+            <p>Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).</p>
+      <p><strong>Examples:</strong></p><ul><li>... and 7 more</li></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>ARIA IDs are not unique</h4>
+            <p>The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn more](https://web.dev/duplicate-id-aria/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>Image elements do not have `[alt]` attributes</h4>
+            <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://web.dev/image-alt/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+        </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <td><a href="https://guides.library.columbia.edu/biological-sciences-guides" target="_blank" class="url-link">https://guides.library.columbia.edu/biological-sciences-guides</a></td>
+      <td><span class="average">84</span></td>
+      <td>3</td>
+      <td>
+        <button id="button-url-2" class="toggle-issues" onclick="toggleIssues('url-2')">Show Issues</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="issues-url-2" class="issues-container">
+  
+          <div class="issue">
+            <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+            <p>Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>ARIA IDs are not unique</h4>
+            <p>The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn more](https://web.dev/duplicate-id-aria/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>Image elements do not have `[alt]` attributes</h4>
+            <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://web.dev/image-alt/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+        </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <td><a href="https://guides.library.columbia.edu/moderntibetanstudiesguide" target="_blank" class="url-link">https://guides.library.columbia.edu/moderntibetanstudiesguide</a></td>
+      <td><span class="average">84</span></td>
+      <td>3</td>
+      <td>
+        <button id="button-url-3" class="toggle-issues" onclick="toggleIssues('url-3')">Show Issues</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="issues-url-3" class="issues-container">
+  
+          <div class="issue">
+            <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+            <p>Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).</p>
+      <p><strong>Examples:</strong></p><ul><li>... and 16 more</li></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>ARIA IDs are not unique</h4>
+            <p>The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn more](https://web.dev/duplicate-id-aria/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>Image elements do not have `[alt]` attributes</h4>
+            <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://web.dev/image-alt/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+        </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <td><a href="https://guides.library.columbia.edu/AFAS" target="_blank" class="url-link">https://guides.library.columbia.edu/AFAS</a></td>
+      <td><span class="average">89</span></td>
+      <td>3</td>
+      <td>
+        <button id="button-url-4" class="toggle-issues" onclick="toggleIssues('url-4')">Show Issues</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="issues-url-4" class="issues-container">
+  
+          <div class="issue">
+            <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+            <p>Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).</p>
+      <p><strong>Examples:</strong></p><ul><li>... and 16 more</li></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>ARIA IDs are not unique</h4>
+            <p>The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn more](https://web.dev/duplicate-id-aria/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+          <div class="issue">
+            <h4>Heading elements are not in a sequentially-descending order</h4>
+            <p>Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more](https://web.dev/heading-order/).</p>
+      <p><strong>Examples:</strong></p><ul></ul>
+          </div>
+      
+        </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <td><a href="https://academiccommons.columbia.edu/" target="_blank" class="url-link">https://academiccommons.columbia.edu/</a></td>
+      <td><span class="good">100</span></td>
+      <td>0</td>
+      <td>
+        <button id="button-url-5" class="toggle-issues" onclick="toggleIssues('url-5')">Show Issues</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="issues-url-5" class="issues-container">
+  <p>No accessibility issues found!</p>
+        </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <td><a href="https://digitaldante.columbia.edu/" target="_blank" class="url-link">https://digitaldante.columbia.edu/</a></td>
+      <td><span class="good">100</span></td>
+      <td>0</td>
+      <td>
+        <button id="button-url-6" class="toggle-issues" onclick="toggleIssues('url-6')">Show Issues</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="issues-url-6" class="issues-container">
+  <p>No accessibility issues found!</p>
+        </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <td><a href="https://wfpp.columbia.edu/" target="_blank" class="url-link">https://wfpp.columbia.edu/</a></td>
+      <td><span class="good">100</span></td>
+      <td>0</td>
+      <td>
+        <button id="button-url-7" class="toggle-issues" onclick="toggleIssues('url-7')">Show Issues</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="issues-url-7" class="issues-container">
+  <p>No accessibility issues found!</p>
+        </div>
+      </td>
+    </tr>
+  
+  </table>
+  <p>Generated on 3/13/2025, 4:10:42 PM</p>
+</body>
+</html>
