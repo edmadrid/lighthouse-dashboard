@@ -6,9 +6,9 @@ mkdir -p src/inputs
 mkdir -p dist
 
 # Check if input file exists
-if [ ! -f "src/inputs/sites.txt" ]; then
-    echo "Error: src/inputs/sites.txt file not found."
-    echo "Please create a file at src/inputs/sites.txt with one URL per line."
+if [ ! -f "src/inputs/sites.json" ]; then
+    echo "Error: src/inputs/sites.json file not found."
+    echo "Please create a JSON file at src/inputs/sites.json with your URLs organized by category."
     exit 1
 fi
 
