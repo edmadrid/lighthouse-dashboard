@@ -335,7 +335,11 @@ const reportsData = jsonReports.map(reportFile => {
       // Find which category this URL belongs to
       let category = 'Uncategorized';
       for (const [cat, urls] of Object.entries(sitesByCategory)) {
-        if (urls.includes(url)) {
+        // Normalize URLs for comparison (remove trailing slashes)
+        const normalizedUrl = url.replace(/\/$/, '');
+        const normalizedUrls = urls.map(u => u.replace(/\/$/, ''));
+        
+        if (normalizedUrls.includes(normalizedUrl)) {
           category = cat;
           break;
         }
