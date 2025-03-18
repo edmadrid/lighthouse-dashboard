@@ -43,14 +43,16 @@ const cssStyles = `
   }
   h1 { 
     color: #333; 
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
   }
   table { 
     width: 100%; 
     border-collapse: collapse; 
     margin-bottom: 30px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
   th, td { 
     border: 1px solid #ddd; 
@@ -58,7 +60,7 @@ const cssStyles = `
     text-align: left; 
   }
   th { 
-    background-color: #f5f5f5; 
+    background-color: #fff; 
     font-weight: 600;
   }
   .good { 
@@ -159,17 +161,37 @@ const cssStyles = `
     font-size: 14px;
   }
   tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #fff;
   }
-  tr:hover {
+  tr:nth-child(even):hover {
     background-color: #f5f5f5;
   }
   .category-header {
-    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
     padding: 10px 15px;
-    margin: 30px 0 15px 0;
-    border-left: 5px solid #0366d6;
-    font-size: 18px;
+    margin: 15px 0 0 0;
+    border: 1px solid #ddd;
+  }
+  .category-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+  .category-stats {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+    padding: 8px;
+    background: #eee;
+  }
+  .category-stats span {
+    white-space: nowrap;
   }
   .filter-container {
     margin-bottom: 20px;
@@ -273,6 +295,34 @@ const javaScript = `
       }
     });
   }
+  
+  function toggleUrlVisibility(categoryId) {
+    const urlTable = document.getElementById('table-' + categoryId);
+    const toggleButton = document.getElementById('toggle-' + categoryId);
+    
+    if (urlTable.style.display === 'none' || urlTable.style.display === '') {
+      urlTable.style.display = 'table';
+      toggleButton.textContent = 'Hide URLs';
+    } else {
+      urlTable.style.display = 'none';
+      toggleButton.textContent = 'Show URLs';
+    }
+  }
+  
+  function toggleAllUrls(show) {
+    document.querySelectorAll('.url-table').forEach(table => {
+      table.style.display = show ? 'table' : 'none';
+    });
+    
+    document.querySelectorAll('.toggle-urls').forEach(button => {
+      button.textContent = show ? 'Hide URLs' : 'Show URLs';
+    });
+  }
+  
+  // Hide all URL tables by default when page loads
+  window.addEventListener('DOMContentLoaded', function() {
+    toggleAllUrls(false);
+  });
 `;
 
 // Start building the HTML
@@ -396,8 +446,10 @@ summaryHTML += `
   <div class="summary-header">
     <h2>Site Scores</h2>
     <div>
-      <button onclick="expandAll()" class="toggle-issues">Expand All</button>
-      <button onclick="collapseAll()" class="toggle-issues">Collapse All</button>
+      <button onclick="expandAll()" class="toggle-issues">Expand All Issues</button>
+      <button onclick="collapseAll()" class="toggle-issues">Collapse All Issues</button>
+      <button onclick="toggleAllUrls(true)" class="toggle-issues">Show All URLs</button>
+      <button onclick="toggleAllUrls(false)" class="toggle-issues">Hide All URLs</button>
     </div>
   </div>
 `;
@@ -419,10 +471,35 @@ sortedCategories.forEach(category => {
   const categoryReports = reportsByCategory[category];
   const categoryId = category.replace(/\s+/g, '-').toLowerCase();
   
+  // Calculate category-specific stats
+  let categoryScore = 0;
+  let categoryIssues = 0;
+  let categoryPassing = 0;
+  
+  categoryReports.forEach(report => {
+    categoryScore += report.score;
+    categoryIssues += report.issues.length;
+    if (report.score >= 90) categoryPassing++;
+  });
+  
+  const avgCategoryScore = Math.round(categoryScore / categoryReports.length);
+  const avgCategoryClass = avgCategoryScore >= 90 ? 'good' : (avgCategoryScore >= 50 ? 'average' : 'poor');
+  
   summaryHTML += `
   <div id="category-${categoryId}" class="category-section">
-    <div class="category-header">${category}</div>
-    <table>
+    <div class="category-header">
+      <h3 class="category-title">${category}</h3>
+      <button id="toggle-${categoryId}" class="toggle-issues toggle-urls" onclick="toggleUrlVisibility('${categoryId}')">Show URLs</button>
+    </div>
+    
+    <div class="category-stats">
+      <span><strong>Sites:</strong> ${categoryReports.length}</span> | 
+      <span><strong>Avg score:</strong> <span class="${avgCategoryClass}">${avgCategoryScore}</span></span> | 
+      <span><strong>Passing:</strong> ${categoryPassing}</span> | 
+      <span><strong>Issues:</strong> ${categoryIssues}</span>
+    </div>
+    
+    <table id="table-${categoryId}" class="url-table">
       <tr>
         <th>URL</th>
         <th>Accessibility Score</th>
