@@ -50,7 +50,7 @@ cat ../inputs/temp-sites.txt
 
 # Run lighthouse-batch with verbose output
 echo "Running lighthouse-batch..."
-lighthouse-batch -f ../inputs/temp-sites.txt -o ../../dist/lighthouse-reports --html --params "--only-categories=accessibility --preset=desktop" --verbose
+lighthouse-batch -g -f ../inputs/temp-sites.txt -o ../../dist/lighthouse-reports --html --params "--only-categories=accessibility --preset=desktop" --verbose
 
 # Check if the command succeeded
 if [ $? -ne 0 ]; then
