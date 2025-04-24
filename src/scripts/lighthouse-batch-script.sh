@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Get input filename from argument
+INPUT_FILE="$1"
+if [ -z "$INPUT_FILE" ]; then
+    echo "Error: No input file specified."
+    echo "Usage: $0 <input-json-file>"
+    exit 1
+fi
+
+# Extract base name without extension
+BASE_NAME=$(basename "$INPUT_FILE" .json)
+
 # Create a directory for the reports if it doesn't exist
 mkdir -p ../../dist/lighthouse-reports
 
@@ -10,15 +21,21 @@ if ! command -v lighthouse-batch &> /dev/null; then
     exit 1
 fi
 
+# Check if input file exists
+if [ ! -f "../inputs/$INPUT_FILE" ]; then
+    echo "Error: Input file ../inputs/$INPUT_FILE not found."
+    exit 1
+fi
+
 # Generate a temporary URLs file from the JSON
-echo "Extracting URLs from sites.json..."
-node -e '
-const fs = require("fs");
-const path = require("path");
-const jsonPath = path.join(__dirname, "../inputs/sites.json");
+echo "Extracting URLs from $INPUT_FILE..."
+node -e "
+const fs = require('fs');
+const path = require('path');
+const jsonPath = path.join(__dirname, '../inputs/$INPUT_FILE');
 
 try {
-    const data = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+    const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
     const allUrls = [];
     
     // Flatten all URLs from all categories
@@ -29,28 +46,32 @@ try {
     }
     
     // Write to temp file
-    const tempPath = path.join(__dirname, "../inputs/temp-sites.txt");
-    fs.writeFileSync(tempPath, allUrls.join("\n"));
-    console.log(`Extracted ${allUrls.length} URLs to temporary file`);
+    const tempPath = path.join(__dirname, '../inputs/temp-urls.txt');
+    fs.writeFileSync(tempPath, allUrls.join('\n'));
+    console.log(\`Extracted \${allUrls.length} URLs to temporary file\`);
 } catch (error) {
-    console.error("Error processing sites.json:", error);
+    console.error('Error processing $INPUT_FILE:', error);
     process.exit(1);
 }
-'
+"
 
 # Check if the temporary file was created successfully
-if [ ! -f "../inputs/temp-sites.txt" ]; then
-    echo "Error: Failed to create temporary URLs file from sites.json"
+if [ ! -f "../inputs/temp-urls.txt" ]; then
+    echo "Error: Failed to create temporary URLs file from $INPUT_FILE"
     exit 1
 fi
 
 # Print the extracted URLs for debugging
 echo "URLs to test:"
-cat ../inputs/temp-sites.txt
+cat ../inputs/temp-urls.txt
+
+# Create a reports subfolder for this specific run
+REPORT_DIR="../../dist/lighthouse-reports/$BASE_NAME-reports"
+mkdir -p "$REPORT_DIR"
 
 # Run lighthouse-batch with verbose output
 echo "Running lighthouse-batch..."
-lighthouse-batch -g -f ../inputs/temp-sites.txt -o ../../dist/lighthouse-reports --html --params "--only-categories=accessibility --preset=desktop" --verbose
+lighthouse-batch -g -f ../inputs/temp-urls.txt -o "$REPORT_DIR" --html --params "--only-categories=accessibility --preset=desktop" --verbose
 
 # Check if the command succeeded
 if [ $? -ne 0 ]; then
@@ -59,15 +80,18 @@ if [ $? -ne 0 ]; then
 fi
 
 # Check if reports were created
-if [ ! "$(ls -A ../../dist/lighthouse-reports 2>/dev/null)" ]; then
-    echo "Warning: No reports were generated in the lighthouse-reports directory."
+if [ ! "$(ls -A "$REPORT_DIR" 2>/dev/null)" ]; then
+    echo "Warning: No reports were generated in $REPORT_DIR directory."
 else
-    echo "Reports generated successfully in lighthouse-reports directory:"
-    ls -la ../../dist/lighthouse-reports
+    echo "Reports generated successfully in $REPORT_DIR directory:"
+    ls -la "$REPORT_DIR"
 fi
 
 # Clean up temporary file
-rm -f ../inputs/temp-sites.txt
+rm -f ../inputs/temp-urls.txt
 echo "Temporary URL list removed."
 
-echo "Lighthouse accessibility audits completed. Reports saved to dist/lighthouse-reports directory."
+echo "Lighthouse accessibility audits completed. Reports saved to $REPORT_DIR directory."
+
+# Pass the base name back to the calling script
+echo "$BASE_NAME"

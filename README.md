@@ -14,3 +14,8 @@ chmod +x src/scripts/lighthouse-batch-script.sh
 chmod +x src/scripts/run-audit.sh
 ```
 
+## Usage
+
+`./run-tests.sh` will test all sites specifed in /inputs/sites.json and generate a dashboard in /dist/sites.html. 
+
+To can test a different set of sites by adding a json file to /inputs and specifying the file name when running the script, e.g., `./run-tests.sh file-name.json`. This will output a new dashboard at /dist/file-name.json. 

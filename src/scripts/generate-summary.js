@@ -1,11 +1,28 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define the reports directory path
-const reportsDir = path.join(__dirname, '../../dist/lighthouse-reports');
+// Get input filename from command line arguments
+const inputFileName = process.argv[2];
+if (!inputFileName) {
+  console.error('Error: No input file specified');
+  console.error('Usage: node generate-summary.js <input-json-file>');
+  process.exit(1);
+}
+
+// Extract base name without extension
+const baseName = path.basename(inputFileName, '.json');
+
+// Define the reports directory path for this specific run
+const reportsDir = path.join(__dirname, `../../dist/lighthouse-reports/${baseName}-reports`);
+
+// Check if reports directory exists
+if (!fs.existsSync(reportsDir)) {
+  console.error(`Error: Reports directory ${reportsDir} does not exist`);
+  process.exit(1);
+}
 
 // Read all files in the lighthouse-reports directory
-console.log('Reading files from lighthouse-reports directory...');
+console.log(`Reading files from ${reportsDir} directory...`);
 const files = fs.readdirSync(reportsDir);
 console.log(`Found ${files.length} files: ${files.join(', ')}`);
 
@@ -19,7 +36,7 @@ function sanitizeHTML(text) {
   
   // First, escape HTML tags and convert backtick code sections
   let sanitized = text
-    .replace(/`([^`]+)`/g, (match, codeContent) => {
+    .replace(/\`([^\`]+)\`/g, (match, codeContent) => {
       // Pre-escape content inside backticks
       return `<code>${codeContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`;
     })
@@ -330,30 +347,30 @@ let summaryHTML = `
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lighthouse Accessibility Dashboard</title>
+  <title>Lighthouse Accessibility Dashboard - ${baseName}</title>
   <style>${cssStyles}</style>
   <script>${javaScript}</script>
 </head>
 <body>
-  <h1>Lighthouse Accessibility Dashboard</h1>
+  <h1>Lighthouse Accessibility Dashboard - ${baseName}</h1>
 `;
 
 // Read the URLs from the JSON file
 let sitesByCategory = {};
 try {
-  if (fs.existsSync(path.join(__dirname, '../inputs/sites.json'))) {
-    const jsonContent = fs.readFileSync(path.join(__dirname, '../inputs/sites.json'), 'utf8');
+  if (fs.existsSync(path.join(__dirname, `../inputs/${inputFileName}`))) {
+    const jsonContent = fs.readFileSync(path.join(__dirname, `../inputs/${inputFileName}`), 'utf8');
     sitesByCategory = JSON.parse(jsonContent);
-    console.log(`Read ${Object.keys(sitesByCategory).length} categories from sites.json`);
+    console.log(`Read ${Object.keys(sitesByCategory).length} categories from ${inputFileName}`);
     
     // Count total URLs
     const totalUrls = Object.values(sitesByCategory).reduce((total, urls) => total + urls.length, 0);
-    console.log(`Total URLs in sites.json: ${totalUrls}`);
+    console.log(`Total URLs in ${inputFileName}: ${totalUrls}`);
   } else {
-    console.log('sites.json not found, will use report files to determine URLs');
+    console.log(`${inputFileName} not found, will use report files to determine URLs`);
   }
 } catch (error) {
-  console.error('Error reading sites.json:', error);
+  console.error(`Error reading ${inputFileName}:`, error);
 }
 
 // Process reports to get summary data
@@ -595,5 +612,6 @@ summaryHTML += `
 `;
 
 // Write the summary HTML file
-fs.writeFileSync(path.join(__dirname, '../../dist/accessibility-summary.html'), summaryHTML);
-console.log('Summary report created: ../../dist/accessibility-summary.html');
+const outputPath = path.join(__dirname, `../../dist/${baseName}.html`);
+fs.writeFileSync(outputPath, summaryHTML);
+console.log(`Summary report created: ${outputPath}`);
