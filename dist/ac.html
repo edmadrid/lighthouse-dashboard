@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lighthouse Accessibility Dashboard - ac</title>
+  <style>
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    line-height: 1.5;
+  }
+  h1 { 
+    color: #333; 
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 30px;
+  }
+  th, td { 
+    border: 1px solid #ddd; 
+    padding: 12px; 
+    text-align: left; 
+  }
+  th { 
+    background-color: #fff; 
+    font-weight: 600;
+  }
+  .good { 
+    background-color: #0cce6b; 
+    color: white; 
+    font-weight: bold; 
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .average { 
+    background-color: #ffa400; 
+    color: white; 
+    font-weight: bold; 
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .poor { 
+    background-color: #ff4e42; 
+    color: white; 
+    font-weight: bold; 
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .issues-container {
+    margin-top: 10px;
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 15px;
+  }
+  .issue { 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    background-color: white; 
+    border-left: 4px solid #ff4e42; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .issue h4 { 
+    margin-top: 0; 
+    color: #333;
+  }
+  .issue p {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  .toggle-issues {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  .toggle-issues:hover {
+    background-color: #e9e9e9;
+  }
+  .url-link {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  .url-link:hover {
+    text-decoration: underline;
+  }
+  .summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .stats {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+  }
+  .stat-card {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  .stat-label {
+    color: #666;
+    font-size: 14px;
+  }
+  tr:nth-child(even) {
+    background-color: #fff;
+  }
+  tr:nth-child(even):hover {
+    background-color: #f5f5f5;
+  }
+  .category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
+    margin: 15px 0 0 0;
+    border: 1px solid #ddd;
+  }
+  .category-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+  .category-stats {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+    padding: 8px;
+    background: #eee;
+  }
+  .category-stats span {
+    white-space: nowrap;
+  }
+  .filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .filter-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  .search-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    flex-grow: 1;
+    max-width: 300px;
+  }
+  code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.9em;
+  }
+</style>
+  <script>
+  function toggleIssues(urlId) {
+    const container = document.getElementById('issues-' + urlId);
+    const button = document.getElementById('button-' + urlId);
+    
+    if (container.style.display === 'none' || container.style.display === '') {
+      container.style.display = 'block';
+      button.textContent = 'Hide Issues';
+    } else {
+      container.style.display = 'none';
+      button.textContent = 'Show Issues';
+    }
+  }
+  
+  function expandAll() {
+    document.querySelectorAll('.issues-container').forEach(container => {
+      container.style.display = 'block';
+    });
+    document.querySelectorAll('.toggle-issues').forEach(button => {
+      if (button.id.startsWith('button-')) {
+        button.textContent = 'Hide Issues';
+      }
+    });
+  }
+  
+  function collapseAll() {
+    document.querySelectorAll('.issues-container').forEach(container => {
+      container.style.display = 'none';
+    });
+    document.querySelectorAll('.toggle-issues').forEach(button => {
+      if (button.id.startsWith('button-')) {
+        button.textContent = 'Show Issues';
+      }
+    });
+  }
+
+  function filterByCategory(category) {
+    const allCategories = document.querySelectorAll('.category-section');
+    if (category === 'all') {
+      allCategories.forEach(section => {
+        section.style.display = 'block';
+      });
+    } else {
+      allCategories.forEach(section => {
+        if (section.id === 'category-' + category) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  }
+
+  function filterByUrl(searchText) {
+    const rows = document.querySelectorAll('tr[data-url]');
+    const searchLower = searchText.toLowerCase();
+    
+    rows.forEach(row => {
+      const url = row.getAttribute('data-url').toLowerCase();
+      const nextRow = row.nextElementSibling;
+      
+      if (url.includes(searchLower)) {
+        row.style.display = '';
+        if (nextRow && nextRow.classList.contains('issues-row')) {
+          nextRow.style.display = '';
+        }
+      } else {
+        row.style.display = 'none';
+        if (nextRow && nextRow.classList.contains('issues-row')) {
+          nextRow.style.display = 'none';
+        }
+      }
+    });
+  }
+  
+  function toggleUrlVisibility(categoryId) {
+    const urlTable = document.getElementById('table-' + categoryId);
+    const toggleButton = document.getElementById('toggle-' + categoryId);
+    
+    if (urlTable.style.display === 'none' || urlTable.style.display === '') {
+      urlTable.style.display = 'table';
+      toggleButton.textContent = 'Hide URLs';
+    } else {
+      urlTable.style.display = 'none';
+      toggleButton.textContent = 'Show URLs';
+    }
+  }
+  
+  function toggleAllUrls(show) {
+    document.querySelectorAll('.url-table').forEach(table => {
+      table.style.display = show ? 'table' : 'none';
+    });
+    
+    document.querySelectorAll('.toggle-urls').forEach(button => {
+      button.textContent = show ? 'Hide URLs' : 'Show URLs';
+    });
+  }
+  
+  // Hide all URL tables by default when page loads
+  window.addEventListener('DOMContentLoaded', function() {
+    toggleAllUrls(false);
+  });
+</script>
+</head>
+<body>
+  <h1>Lighthouse Accessibility Dashboard - ac</h1>
+
+  <div class="stats">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Sites Tested</div>
+        <div class="stat-value">4</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Average Score</div>
+        <div class="stat-value"><span class="good">100</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Sites Passing (90+)</div>
+        <div class="stat-value">4</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Issues</div>
+        <div class="stat-value">1</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="filter-container">
+    <label for="category-filter">Filter by Category:</label>
+    <select id="category-filter" class="filter-select" onchange="filterByCategory(this.value)">
+      <option value="all">All Categories</option>
+      <option value="academic-commons">Academic Commons</option>
+    </select>
+    
+    <label for="url-search">Search URLs:</label>
+    <input type="text" id="url-search" class="search-input" onkeyup="filterByUrl(this.value)" placeholder="Type to search...">
+  </div>
+  
+  <div class="summary-header">
+    <h2>Site Scores</h2>
+    <div>
+      <button onclick="expandAll()" class="toggle-issues">Expand All Issues</button>
+      <button onclick="collapseAll()" class="toggle-issues">Collapse All Issues</button>
+      <button onclick="toggleAllUrls(true)" class="toggle-issues">Show All URLs</button>
+      <button onclick="toggleAllUrls(false)" class="toggle-issues">Hide All URLs</button>
+    </div>
+  </div>
+
+  <div id="category-academic-commons" class="category-section">
+    <div class="category-header">
+      <h3 class="category-title">Academic Commons</h3>
+      <button id="toggle-academic-commons" class="toggle-issues toggle-urls" onclick="toggleUrlVisibility('academic-commons')">Show URLs</button>
+    </div>
+    
+    <div class="category-stats">
+      <span><strong>Sites:</strong> 4</span> | 
+      <span><strong>Avg score:</strong> <span class="good">100</span></span> | 
+      <span><strong>Passing:</strong> 4</span> | 
+      <span><strong>Issues:</strong> 1</span>
+    </div>
+    
+    <table id="table-academic-commons" class="url-table">
+      <tr>
+        <th>URL</th>
+        <th>Accessibility Score</th>
+        <th>Issues</th>
+        <th>Actions</th>
+      </tr>
+  
+      <tr data-url="https://academiccommons.columbia.edu/">
+        <td><a href="https://academiccommons.columbia.edu/" target="_blank" class="url-link">https://academiccommons.columbia.edu/</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-academic-commons-0" class="toggle-issues" onclick="toggleIssues('academic-commons-0')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-academic-commons-0" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH">
+        <td><a href="https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH" target="_blank" class="url-link">https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-academic-commons-1" class="toggle-issues" onclick="toggleIssues('academic-commons-1')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-academic-commons-1" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://academiccommons.columbia.edu/explore">
+        <td><a href="https://academiccommons.columbia.edu/explore" target="_blank" class="url-link">https://academiccommons.columbia.edu/explore</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-academic-commons-2" class="toggle-issues" onclick="toggleIssues('academic-commons-2')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-academic-commons-2" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://academiccommons.columbia.edu/search?search_field=all_fields&q=">
+        <td><a href="https://academiccommons.columbia.edu/search?search_field=all_fields&q=" target="_blank" class="url-link">https://academiccommons.columbia.edu/search?search_field=all_fields&q=</a></td>
+        <td><span class="good">100</span></td>
+        <td>1</td>
+        <td>
+          <button id="button-academic-commons-3" class="toggle-issues" onclick="toggleIssues('academic-commons-3')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-academic-commons-3" class="issues-container">
+    
+            <div class="issue">
+              <h4>Elements with visible text labels do not have matching accessible names.</h4>
+              <p>Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch" target="_blank">Learn more about accessible names</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+    </table>
+  </div>
+  
+  <p>Generated on 5/27/2025, 3:15:53 PM</p>
+</body>
+</html>
