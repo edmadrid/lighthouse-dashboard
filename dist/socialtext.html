@@ -163,24 +163,6 @@
   .category-stats span {
     white-space: nowrap;
   }
-  .filter-container {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  .filter-select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-  }
-  .search-input {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    flex-grow: 1;
-    max-width: 300px;
-  }
   code {
     background-color: #f0f0f0;
     padding: 2px 4px;
@@ -225,44 +207,6 @@
     });
   }
 
-  function filterByCategory(category) {
-    const allCategories = document.querySelectorAll('.category-section');
-    if (category === 'all') {
-      allCategories.forEach(section => {
-        section.style.display = 'block';
-      });
-    } else {
-      allCategories.forEach(section => {
-        if (section.id === 'category-' + category) {
-          section.style.display = 'block';
-        } else {
-          section.style.display = 'none';
-        }
-      });
-    }
-  }
-
-  function filterByUrl(searchText) {
-    const rows = document.querySelectorAll('tr[data-url]');
-    const searchLower = searchText.toLowerCase();
-    
-    rows.forEach(row => {
-      const url = row.getAttribute('data-url').toLowerCase();
-      const nextRow = row.nextElementSibling;
-      
-      if (url.includes(searchLower)) {
-        row.style.display = '';
-        if (nextRow && nextRow.classList.contains('issues-row')) {
-          nextRow.style.display = '';
-        }
-      } else {
-        row.style.display = 'none';
-        if (nextRow && nextRow.classList.contains('issues-row')) {
-          nextRow.style.display = 'none';
-        }
-      }
-    });
-  }
   
   function toggleUrlVisibility(categoryId) {
     const urlTable = document.getElementById('table-' + categoryId);
@@ -304,7 +248,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Average Score</div>
-        <div class="stat-value"><span class="average">83</span></div>
+        <div class="stat-value"><span class="average">87</span></div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Sites Passing (90+)</div>
@@ -312,21 +256,11 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Total Issues</div>
-        <div class="stat-value">4</div>
+        <div class="stat-value">3</div>
       </div>
     </div>
   </div>
   
-  <div class="filter-container">
-    <label for="category-filter">Filter by Category:</label>
-    <select id="category-filter" class="filter-select" onchange="filterByCategory(this.value)">
-      <option value="all">All Categories</option>
-      <option value="socialtext">SocialText</option>
-    </select>
-    
-    <label for="url-search">Search URLs:</label>
-    <input type="text" id="url-search" class="search-input" onkeyup="filterByUrl(this.value)" placeholder="Type to search...">
-  </div>
   
   <div class="summary-header">
     <h2>Site Scores</h2>
@@ -346,9 +280,9 @@
     
     <div class="category-stats">
       <span><strong>Sites:</strong> 1</span> | 
-      <span><strong>Avg score:</strong> <span class="average">83</span></span> | 
+      <span><strong>Avg score:</strong> <span class="average">87</span></span> | 
       <span><strong>Passing:</strong> 0</span> | 
-      <span><strong>Issues:</strong> 4</span>
+      <span><strong>Issues:</strong> 3</span>
     </div>
     
     <table id="table-socialtext" class="url-table">
@@ -361,8 +295,8 @@
   
       <tr data-url="https://socialtextjournal.org/">
         <td><a href="https://socialtextjournal.org/" target="_blank" class="url-link">https://socialtextjournal.org/</a></td>
-        <td><span class="average">83</span></td>
-        <td>4</td>
+        <td><span class="average">87</span></td>
+        <td>3</td>
         <td>
           <button id="button-socialtext-0" class="toggle-issues" onclick="toggleIssues('socialtext-0')">Show Issues</button>
         </td>
@@ -373,25 +307,19 @@
     
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul><li>... and 42 more</li></ul>
             </div>
         
             <div class="issue">
               <h4>Image elements do not have &lt;code&gt;[alt]&lt;/code&gt; attributes</h4>
-              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt" target="_blank">Learn more about the &lt;code&gt;alt&lt;/code&gt; attribute</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
-            </div>
-        
-            <div class="issue">
-              <h4>Links rely on color to be distinguishable.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://web.dev/image-alt/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
             </div>
         
             <div class="issue">
               <h4>Links do not have a discernible name</h4>
-              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/link-name" target="_blank">Learn how to make links accessible</a>.</p>
+              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://web.dev/link-name/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul><li>... and 11 more</li></ul>
             </div>
         
@@ -402,6 +330,6 @@
     </table>
   </div>
   
-  <p>Generated on 7/3/2025, 10:11:40 AM</p>
+  <p>Generated on 7/7/2025, 11:25:29 AM</p>
 </body>
 </html>

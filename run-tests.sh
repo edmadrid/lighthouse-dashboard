@@ -47,5 +47,10 @@ echo ""
 echo "Generating tabbed index dashboard..."
 ./generate-index.sh
 
+# Clean up unnecessary lighthouse report files
+echo ""
+echo "Cleaning up lighthouse reports..."
+./cleanup-reports.sh
+
 echo ""
 echo "🎉 All done! View the complete dashboard at: dist/index.html"
