@@ -210,24 +210,6 @@ const cssStyles = `
   .category-stats span {
     white-space: nowrap;
   }
-  .filter-container {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  .filter-select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-  }
-  .search-input {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    flex-grow: 1;
-    max-width: 300px;
-  }
   code {
     background-color: #f0f0f0;
     padding: 2px 4px;
@@ -274,44 +256,6 @@ const javaScript = `
     });
   }
 
-  function filterByCategory(category) {
-    const allCategories = document.querySelectorAll('.category-section');
-    if (category === 'all') {
-      allCategories.forEach(section => {
-        section.style.display = 'block';
-      });
-    } else {
-      allCategories.forEach(section => {
-        if (section.id === 'category-' + category) {
-          section.style.display = 'block';
-        } else {
-          section.style.display = 'none';
-        }
-      });
-    }
-  }
-
-  function filterByUrl(searchText) {
-    const rows = document.querySelectorAll('tr[data-url]');
-    const searchLower = searchText.toLowerCase();
-    
-    rows.forEach(row => {
-      const url = row.getAttribute('data-url').toLowerCase();
-      const nextRow = row.nextElementSibling;
-      
-      if (url.includes(searchLower)) {
-        row.style.display = '';
-        if (nextRow && nextRow.classList.contains('issues-row')) {
-          nextRow.style.display = '';
-        }
-      } else {
-        row.style.display = 'none';
-        if (nextRow && nextRow.classList.contains('issues-row')) {
-          nextRow.style.display = 'none';
-        }
-      }
-    });
-  }
   
   function toggleUrlVisibility(categoryId) {
     const urlTable = document.getElementById('table-' + categoryId);
@@ -424,8 +368,6 @@ const reportsData = jsonReports.map(reportFile => {
 const avgScore = processedReports > 0 ? Math.round(totalScore / processedReports) : 0;
 const avgScoreClass = avgScore >= 90 ? 'good' : (avgScore >= 50 ? 'average' : 'poor');
 
-// Create a list of categories for the filter dropdown
-const categories = [...new Set(reportsData.map(report => report.category))].sort();
 
 summaryHTML += `
   <div class="stats">
@@ -449,16 +391,6 @@ summaryHTML += `
     </div>
   </div>
   
-  <div class="filter-container">
-    <label for="category-filter">Filter by Category:</label>
-    <select id="category-filter" class="filter-select" onchange="filterByCategory(this.value)">
-      <option value="all">All Categories</option>
-      ${categories.map(cat => `<option value="${cat.replace(/\s+/g, '-').toLowerCase()}">${cat}</option>`).join('')}
-    </select>
-    
-    <label for="url-search">Search URLs:</label>
-    <input type="text" id="url-search" class="search-input" onkeyup="filterByUrl(this.value)" placeholder="Type to search...">
-  </div>
   
   <div class="summary-header">
     <h2>Site Scores</h2>

@@ -16,6 +16,11 @@ chmod +x src/scripts/run-audit.sh
 
 ## Usage
 
-`./run-tests.sh` will test all sites specifed in /inputs/sites.json and generate a dashboard in /dist/sites.html. 
+`./run-tests.sh <filename.json>` will test all sites specified in the JSON file and generate individual dashboards plus a tabbed index.
 
-You can test a different set of sites by adding a json file to /inputs and specifying the file name when running the script, e.g., `./run-tests.sh file-name.json`. This will output a new dashboard at /dist/file-name.json. 
+Example: `./run-tests.sh ac.json` will:
+- Test all sites in `/src/inputs/ac.json` 
+- Generate a dashboard at `/dist/ac.html`
+- Automatically update the tabbed index at `/dist/index.html`
+
+**Required:** You must specify a JSON filename. The script will show available JSON files if none is provided. 
