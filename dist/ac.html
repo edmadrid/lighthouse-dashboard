@@ -256,7 +256,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Total Issues</div>
-        <div class="stat-value">0</div>
+        <div class="stat-value">1</div>
       </div>
     </div>
   </div>
@@ -282,7 +282,7 @@
       <span><strong>Sites:</strong> 4</span> | 
       <span><strong>Avg score:</strong> <span class="good">100</span></span> | 
       <span><strong>Passing:</strong> 4</span> | 
-      <span><strong>Issues:</strong> 0</span>
+      <span><strong>Issues:</strong> 1</span>
     </div>
     
     <table id="table-academic-commons" class="url-table">
@@ -344,7 +344,7 @@
       <tr data-url="https://academiccommons.columbia.edu/search?search_field=all_fields&q=">
         <td><a href="https://academiccommons.columbia.edu/search?search_field=all_fields&q=" target="_blank" class="url-link">https://academiccommons.columbia.edu/search?search_field=all_fields&q=</a></td>
         <td><span class="good">100</span></td>
-        <td>0</td>
+        <td>1</td>
         <td>
           <button id="button-academic-commons-3" class="toggle-issues" onclick="toggleIssues('academic-commons-3')">Show Issues</button>
         </td>
@@ -352,7 +352,13 @@
       <tr class="issues-row">
         <td colspan="4">
           <div id="issues-academic-commons-3" class="issues-container">
-    <p>No accessibility issues found!</p>
+    
+            <div class="issue">
+              <h4>Elements with visible text labels do not have matching accessible names.</h4>
+              <p>Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch" target="_blank">Learn more about accessible names</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
           </div>
         </td>
       </tr>
@@ -360,6 +366,6 @@
     </table>
   </div>
   
-  <p>Generated on 7/7/2025, 11:32:27 AM</p>
+  <p>Generated on 7/8/2025, 10:49:24 AM</p>
 </body>
 </html>
