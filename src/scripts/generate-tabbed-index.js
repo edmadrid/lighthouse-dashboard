@@ -142,12 +142,11 @@ function generateTabbedIndex() {
     
     .tab-nav {
       display: flex;
-      border-bottom: 2px solid #ddd;
+      border: 1px solid #ddd;
       background-color: #f5f5f5;
       padding: 0;
       margin: 0;
       list-style: none;
-      border-radius: 4px 4px 0 0;
     }
     
     .tab-nav li {
@@ -199,9 +198,7 @@ function generateTabbedIndex() {
     
     .main-header {
       text-align: center;
-      margin-bottom: 30px;
       padding: 20px 0;
-      border-bottom: 2px solid #eee;
     }
     
     .main-header h1 {
