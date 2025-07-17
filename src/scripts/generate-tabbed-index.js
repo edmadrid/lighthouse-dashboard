@@ -206,6 +206,11 @@ function generateTabbedIndex() {
       font-size: 2.5rem;
       margin: 0;
     }
+
+    .main-header a {
+      color: #000;
+      text-decoration: none;
+    }
     
     /* Override nested h1 styles in tab content */
     .tab-content h1 {
@@ -258,7 +263,7 @@ function generateTabbedIndex() {
 </head>
 <body>
   <div class="main-header">
-    <h1>CUL Accessibility Dashboard</h1>
+    <h1><a href="/">CUL Accessibility Dashboard</a></h1>
   </div>
   
   <div class="tab-container">
