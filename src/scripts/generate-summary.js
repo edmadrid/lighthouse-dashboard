@@ -205,7 +205,7 @@ summaryHTML += `
   <div class="stats">
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-label">Sites Tested</div>
+        <div class="stat-label">Pages Tested</div>
         <div class="stat-value">${processedReports}</div>
       </div>
       <div class="stat-card">
@@ -213,7 +213,7 @@ summaryHTML += `
         <div class="stat-value"><span class="${avgScoreClass}">${avgScore}</span></div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Sites Passing (90+)</div>
+        <div class="stat-label">Pages Passing (90+)</div>
         <div class="stat-value">${sitesPassing}</div>
       </div>
       <div class="stat-card">
@@ -274,7 +274,7 @@ sortedCategories.forEach(category => {
     </div>
     
     <div class="category-stats">
-      <span><strong>Sites:</strong> ${categoryReports.length}</span> | 
+      <span><strong>Pages:</strong> ${categoryReports.length}</span> | 
       <span><strong>Avg score:</strong> <span class="${avgCategoryClass}">${avgCategoryScore}</span></span> | 
       <span><strong>Passing:</strong> ${categoryPassing}</span> | 
       <span><strong>Issues:</strong> ${categoryIssues}</span>
