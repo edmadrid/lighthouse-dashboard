@@ -1,24 +1,45 @@
-# Lighthouse dashboard demo
+# Lighthouse Accessibility Dashboard Demo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/260580f8-e801-48d5-a6e7-13b46ae89211/deploy-status)](https://app.netlify.com/sites/em-accessibility-dash/deploys)
 
-## Install lighthouse-batch
+## Prerequisites
+
+- Node.js
+- lighthouse-batch npm package
+
+## Setup
+
+### Install lighthouse-batch
 
 `npm install -g lighthouse-batch`
 
-## Script permissions
+### Script permissions
 
-```
+```bash
 chmod +x run-tests.sh
+chmod +x cleanup-reports.sh
+chmod +x generate-index.sh
 chmod +x src/scripts/lighthouse-batch-script.sh 
 chmod +x src/scripts/run-audit.sh
 ```
 
 ## Usage
 
-`./run-tests.sh <filename.json>` will test all sites specified in the JSON file and generate individual dashboards plus a tabbed index.
+`./run-tests.sh <filename.json>` will test all pages specified in the JSON file and generate individual dashboards plus a tabbed index.
 
 Example: `./run-tests.sh ac.json` will:
-- Test all sites in `/src/inputs/ac.json` 
+- Test all pages in `/src/inputs/ac.json` 
 - Generate a dashboard at `/dist/ac.html`
-- Automatically update the index at `/dist/index.html`
+- Update the tabbed index at `/dist/index.html`
+
+## Project Structure
+
+- `/src/inputs/` - JSON files which list pages to test for each site
+- `/src/scripts/` - Build and processing scripts  
+- `/dist/` - Generated HTML dashboards and CSS
+- `/dist/styles.css` - Shared stylesheet for all dashboards
+
+## Additional Scripts
+
+- `./cleanup-reports.sh` - Remove old lighthouse report files to save disk space
+- `./generate-index.sh` - Manually regenerate the tabbed index from existing dashboards
