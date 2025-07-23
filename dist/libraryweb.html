@@ -3,174 +3,7 @@
 <html>
 <head>
   <title>Lighthouse Accessibility Dashboard - libraryweb</title>
-  <style>
-  body { 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    line-height: 1.5;
-  }
-  h1 { 
-    color: #333; 
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 300;
-    margin: 0;
-  }
-  table { 
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-bottom: 30px;
-  }
-  th, td { 
-    border: 1px solid #ddd; 
-    padding: 12px; 
-    text-align: left; 
-  }
-  th { 
-    background-color: #fff; 
-    font-weight: 600;
-  }
-  .good { 
-    background-color: #0cce6b; 
-    color: white; 
-    font-weight: bold; 
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
-  .average { 
-    background-color: #ffa400; 
-    color: white; 
-    font-weight: bold; 
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
-  .poor { 
-    background-color: #ff4e42; 
-    color: white; 
-    font-weight: bold; 
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
-  .issues-container {
-    margin-top: 10px;
-    display: none;
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 15px;
-  }
-  .issue { 
-    margin-bottom: 20px; 
-    padding: 15px; 
-    background-color: white; 
-    border-left: 4px solid #ff4e42; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  }
-  .issue h4 { 
-    margin-top: 0; 
-    color: #333;
-  }
-  .issue p {
-    color: #555;
-    margin-bottom: 10px;
-  }
-  .toggle-issues {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    display: inline-block;
-    margin-top: 5px;
-    font-size: 14px;
-    transition: background-color 0.2s;
-  }
-  .toggle-issues:hover {
-    background-color: #e9e9e9;
-  }
-  .url-link {
-    color: #0366d6;
-    text-decoration: none;
-  }
-  .url-link:hover {
-    text-decoration: underline;
-  }
-  .summary-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .stats {
-    background-color: #f5f5f5;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-  }
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 15px;
-  }
-  .stat-card {
-    background: white;
-    padding: 15px;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
-  .stat-value {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 5px 0;
-  }
-  .stat-label {
-    color: #666;
-    font-size: 14px;
-  }
-  tr:nth-child(even) {
-    background-color: #fff;
-  }
-  tr:nth-child(even):hover {
-    background-color: #f5f5f5;
-  }
-  .category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 15px;
-    margin: 15px 0 0 0;
-    border: 1px solid #ddd;
-  }
-  .category-title {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-  }
-  .category-stats {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 14px;
-    color: #555;
-    padding: 8px;
-    background: #eee;
-  }
-  .category-stats span {
-    white-space: nowrap;
-  }
-  code {
-    background-color: #f0f0f0;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-family: monospace;
-    font-size: 0.9em;
-  }
-</style>
+  <link rel="stylesheet" href="styles.css">
   <script>
   function toggleIssues(urlId) {
     const container = document.getElementById('issues-' + urlId);
@@ -243,20 +76,20 @@
   <div class="stats">
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-label">Sites Tested</div>
+        <div class="stat-label">Pages Tested</div>
         <div class="stat-value">6</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Average Score</div>
-        <div class="stat-value"><span class="average">85</span></div>
+        <div class="stat-value"><span class="good">91</span></div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Sites Passing (90+)</div>
-        <div class="stat-value">2</div>
+        <div class="stat-label">Pages Passing (90+)</div>
+        <div class="stat-value">4</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Total Issues</div>
-        <div class="stat-value">21</div>
+        <div class="stat-value">15</div>
       </div>
     </div>
   </div>
@@ -279,10 +112,10 @@
     </div>
     
     <div class="category-stats">
-      <span><strong>Sites:</strong> 6</span> | 
-      <span><strong>Avg score:</strong> <span class="average">85</span></span> | 
-      <span><strong>Passing:</strong> 2</span> | 
-      <span><strong>Issues:</strong> 21</span>
+      <span><strong>Pages:</strong> 6</span> | 
+      <span><strong>Avg score:</strong> <span class="good">91</span></span> | 
+      <span><strong>Passing:</strong> 4</span> | 
+      <span><strong>Issues:</strong> 15</span>
     </div>
     
     <table id="table-library-web" class="url-table">
@@ -295,8 +128,8 @@
   
       <tr data-url="https://amesa.library.columbia.edu/">
         <td><a href="https://amesa.library.columbia.edu/" target="_blank" class="url-link">https://amesa.library.columbia.edu/</a></td>
-        <td><span class="average">69</span></td>
-        <td>7</td>
+        <td><span class="average">80</span></td>
+        <td>6</td>
         <td>
           <button id="button-library-web-0" class="toggle-issues" onclick="toggleIssues('library-web-0')">Show Issues</button>
         </td>
@@ -307,44 +140,38 @@
     
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul><li>... and 7 more</li></ul>
             </div>
         
             <div class="issue">
               <h4>&lt;code&gt;&lt;html&gt;&lt;/code&gt; element does not have a &lt;code&gt;[lang]&lt;/code&gt; attribute</h4>
-              <p>If a page doesn't specify a &lt;code&gt;lang&lt;/code&gt; attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. <a href="https://dequeuniversity.com/rules/axe/4.10/html-has-lang" target="_blank">Learn more about the &lt;code&gt;lang&lt;/code&gt; attribute</a>.</p>
+              <p>If a page doesn't specify a lang attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. <a href="https://web.dev/html-has-lang/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
             </div>
         
             <div class="issue">
               <h4>Image elements do not have &lt;code&gt;[alt]&lt;/code&gt; attributes</h4>
-              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt" target="_blank">Learn more about the &lt;code&gt;alt&lt;/code&gt; attribute</a>.</p>
+              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://web.dev/image-alt/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
             </div>
         
             <div class="issue">
               <h4>Links do not have a discernible name</h4>
-              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/link-name" target="_blank">Learn how to make links accessible</a>.</p>
+              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://web.dev/link-name/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
             </div>
         
             <div class="issue">
               <h4>Lists do not contain only &lt;code&gt;&lt;li&gt;&lt;/code&gt; elements and script supporting elements (&lt;code&gt;&lt;script&gt;&lt;/code&gt; and &lt;code&gt;&lt;template&gt;&lt;/code&gt;).</h4>
-              <p>Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. <a href="https://dequeuniversity.com/rules/axe/4.10/list" target="_blank">Learn more about proper list structure</a>.</p>
+              <p>Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. <a href="https://web.dev/list/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
             </div>
         
             <div class="issue">
-              <h4>List items (&lt;code&gt;&lt;li&gt;&lt;/code&gt;) are not contained within &lt;code&gt;&lt;ul&gt;&lt;/code&gt;, &lt;code&gt;&lt;ol&gt;&lt;/code&gt; or &lt;code&gt;&lt;menu&gt;&lt;/code&gt; parent elements.</h4>
-              <p>Screen readers require list items (&lt;code&gt;&lt;li&gt;&lt;/code&gt;) to be contained within a parent &lt;code&gt;&lt;ul&gt;&lt;/code&gt;, &lt;code&gt;&lt;ol&gt;&lt;/code&gt; or &lt;code&gt;&lt;menu&gt;&lt;/code&gt; to be announced properly. <a href="https://dequeuniversity.com/rules/axe/4.10/listitem" target="_blank">Learn more about proper list structure</a>.</p>
+              <h4>List items (&lt;code&gt;&lt;li&gt;&lt;/code&gt;) are not contained within &lt;code&gt;&lt;ul&gt;&lt;/code&gt; or &lt;code&gt;&lt;ol&gt;&lt;/code&gt; parent elements.</h4>
+              <p>Screen readers require list items (&lt;code&gt;&lt;li&gt;&lt;/code&gt;) to be contained within a parent &lt;code&gt;&lt;ul&gt;&lt;/code&gt; or &lt;code&gt;&lt;ol&gt;&lt;/code&gt; to be announced properly. <a href="https://web.dev/listitem/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
-            </div>
-        
-            <div class="issue">
-              <h4>Touch targets do not have sufficient size or spacing.</h4>
-              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 4 more</li></ul>
             </div>
         
           </div>
@@ -353,8 +180,8 @@
     
       <tr data-url="https://findingaids.library.columbia.edu/">
         <td><a href="https://findingaids.library.columbia.edu/" target="_blank" class="url-link">https://findingaids.library.columbia.edu/</a></td>
-        <td><span class="average">83</span></td>
-        <td>4</td>
+        <td><span class="average">89</span></td>
+        <td>3</td>
         <td>
           <button id="button-library-web-1" class="toggle-issues" onclick="toggleIssues('library-web-1')">Show Issues</button>
         </td>
@@ -365,36 +192,30 @@
     
             <div class="issue">
               <h4>Elements with an ARIA &lt;code&gt;[role]&lt;/code&gt; that require children to contain a specific &lt;code&gt;[role]&lt;/code&gt; are missing some or all of those required children.</h4>
-              <p>Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. <a href="https://dequeuniversity.com/rules/axe/4.10/aria-required-children" target="_blank">Learn more about roles and required children elements</a>.</p>
+              <p>Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. <a href="https://web.dev/aria-required-children/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
             </div>
         
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
             </div>
         
             <div class="issue">
               <h4>&lt;code&gt;&lt;html&gt;&lt;/code&gt; element does not have a &lt;code&gt;[lang]&lt;/code&gt; attribute</h4>
-              <p>If a page doesn't specify a &lt;code&gt;lang&lt;/code&gt; attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. <a href="https://dequeuniversity.com/rules/axe/4.10/html-has-lang" target="_blank">Learn more about the &lt;code&gt;lang&lt;/code&gt; attribute</a>.</p>
+              <p>If a page doesn't specify a lang attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. <a href="https://web.dev/html-has-lang/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
-            </div>
-        
-            <div class="issue">
-              <h4>Touch targets do not have sufficient size or spacing.</h4>
-              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 9 more</li></ul>
             </div>
         
           </div>
         </td>
       </tr>
     
-      <tr data-url="https://library.columbia.edu/">
-        <td><a href="https://library.columbia.edu/" target="_blank" class="url-link">https://library.columbia.edu/</a></td>
-        <td><span class="average">84</span></td>
-        <td>4</td>
+      <tr data-url="https://hours.library.columbia.edu/">
+        <td><a href="https://hours.library.columbia.edu/" target="_blank" class="url-link">https://hours.library.columbia.edu/</a></td>
+        <td><span class="good">91</span></td>
+        <td>2</td>
         <td>
           <button id="button-library-web-2" class="toggle-issues" onclick="toggleIssues('library-web-2')">Show Issues</button>
         </td>
@@ -404,37 +225,25 @@
           <div id="issues-library-web-2" class="issues-container">
     
             <div class="issue">
-              <h4>&lt;code&gt;[role]&lt;/code&gt;s are not contained by their required parent element</h4>
-              <p>Some ARIA child roles must be contained by specific parent roles to properly perform their intended accessibility functions. <a href="https://dequeuniversity.com/rules/axe/4.10/aria-required-parent" target="_blank">Learn more about ARIA roles and required parent element</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
-            </div>
-        
-            <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 23 more</li></ul>
             </div>
         
             <div class="issue">
-              <h4>Links rely on color to be distinguishable.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+              <h4>ARIA IDs are not unique</h4>
+              <p>The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. <a href="https://web.dev/duplicate-id-aria/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul></ul>
-            </div>
-        
-            <div class="issue">
-              <h4>Touch targets do not have sufficient size or spacing.</h4>
-              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 5 more</li></ul>
             </div>
         
           </div>
         </td>
       </tr>
     
-      <tr data-url="https://hours.library.columbia.edu/">
-        <td><a href="https://hours.library.columbia.edu/" target="_blank" class="url-link">https://hours.library.columbia.edu/</a></td>
-        <td><span class="average">89</span></td>
-        <td>3</td>
+      <tr data-url="https://library.columbia.edu/">
+        <td><a href="https://library.columbia.edu/" target="_blank" class="url-link">https://library.columbia.edu/</a></td>
+        <td><span class="good">91</span></td>
+        <td>2</td>
         <td>
           <button id="button-library-web-3" class="toggle-issues" onclick="toggleIssues('library-web-3')">Show Issues</button>
         </td>
@@ -444,31 +253,25 @@
           <div id="issues-library-web-3" class="issues-container">
     
             <div class="issue">
-              <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 23 more</li></ul>
-            </div>
-        
-            <div class="issue">
-              <h4>Links rely on color to be distinguishable.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+              <h4>&lt;code&gt;[role]&lt;/code&gt;s are not contained by their required parent element</h4>
+              <p>Some ARIA child roles must be contained by specific parent roles to properly perform their intended accessibility functions. <a href="https://web.dev/aria-required-parent/" target="_blank">Learn more</a>.</p>
         <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
             </div>
         
             <div class="issue">
-              <h4>Touch targets do not have sufficient size or spacing.</h4>
-              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 7 more</li></ul>
+              <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
             </div>
         
           </div>
         </td>
       </tr>
     
-      <tr data-url="https://columbiaandslavery.columbia.edu/">
-        <td><a href="https://columbiaandslavery.columbia.edu/" target="_blank" class="url-link">https://columbiaandslavery.columbia.edu/</a></td>
-        <td><span class="good">92</span></td>
-        <td>2</td>
+      <tr data-url="https://clio.columbia.edu/">
+        <td><a href="https://clio.columbia.edu/" target="_blank" class="url-link">https://clio.columbia.edu/</a></td>
+        <td><span class="good">97</span></td>
+        <td>1</td>
         <td>
           <button id="button-library-web-4" class="toggle-issues" onclick="toggleIssues('library-web-4')">Show Issues</button>
         </td>
@@ -479,23 +282,17 @@
     
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
-            </div>
-        
-            <div class="issue">
-              <h4>Links rely on color to be distinguishable.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 7 more</li></ul>
             </div>
         
           </div>
         </td>
       </tr>
     
-      <tr data-url="https://clio.columbia.edu/">
-        <td><a href="https://clio.columbia.edu/" target="_blank" class="url-link">https://clio.columbia.edu/</a></td>
-        <td><span class="good">95</span></td>
+      <tr data-url="https://columbiaandslavery.columbia.edu/">
+        <td><a href="https://columbiaandslavery.columbia.edu/" target="_blank" class="url-link">https://columbiaandslavery.columbia.edu/</a></td>
+        <td><span class="good">98</span></td>
         <td>1</td>
         <td>
           <button id="button-library-web-5" class="toggle-issues" onclick="toggleIssues('library-web-5')">Show Issues</button>
@@ -507,8 +304,8 @@
     
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 7 more</li></ul>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
             </div>
         
           </div>
@@ -518,6 +315,6 @@
     </table>
   </div>
   
-  <p>Generated on 7/17/2025, 1:03:33 PM</p>
+  <p>Generated on 7/23/2025, 1:44:37 PM</p>
 </body>
 </html>
