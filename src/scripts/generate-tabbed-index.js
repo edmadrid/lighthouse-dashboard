@@ -71,7 +71,6 @@ function generateTabbedIndex() {
 
     // Extract content from each file
     const tabs = [];
-    let allStyles = new Set();
     let dashboardScript = '';
 
     files.forEach(filename => {
@@ -86,10 +85,8 @@ function generateTabbedIndex() {
       const title = jsonTitle || capitalizeFirst(htmlTitle);
       
       const bodyContent = extractBodyContent(htmlContent);
-      const styles = extractStyles(htmlContent);
       const scripts = extractScripts(htmlContent);
       
-      if (styles) allStyles.add(styles);
       if (scripts && !dashboardScript) {
         // Only take the script from the first dashboard to avoid duplicates
         dashboardScript = scripts;
@@ -132,63 +129,8 @@ function generateTabbedIndex() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>CUL Accessibility Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
-    ${[...allStyles].join('\\n')}
-    
-    /* Tab styles */
-    .tab-container {
-      margin-bottom: 20px;
-    }
-    
-    .tab-nav {
-      display: flex;
-      border: 1px solid #ddd;
-      background-color: #f5f5f5;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    
-    .tab-nav li {
-      margin: 0;
-    }
-    
-    .tab-nav button {
-      background: none;
-      border: none;
-      padding: 12px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 500;
-      color: #666;
-      border-bottom: 2px solid transparent;
-      transition: all 0.2s;
-    }
-    
-    .tab-nav button:hover {
-      background-color: #e9e9e9;
-      color: #333;
-    }
-    
-    .tab-nav button.active {
-      color: #0366d6;
-      border-bottom-color: #0366d6;
-      background-color: white;
-    }
-    
-    .tab-content {
-      display: none;
-      padding: 20px;
-      background-color: white;
-      border: 1px solid #ddd;
-      border-top: none;
-      border-radius: 0 0 4px 4px;
-    }
-    
-    .tab-content.active {
-      display: block;
-    }
-    
     .welcome-message {
       text-align: center;
       padding: 40px 20px;
