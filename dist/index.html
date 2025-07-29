@@ -150,7 +150,7 @@
   
   <div class="tab-container">
     <ul class="tab-nav">
-      <li><button id="btn-ac" onclick="switchTab('ac')">Academic Commons</button></li><li><button id="btn-dante" onclick="switchTab('dante')">Dante</button></li><li><button id="btn-libraryweb" onclick="switchTab('libraryweb')">Library Web</button></li><li><button id="btn-podcasts" onclick="switchTab('podcasts')">Podcasts</button></li><li><button id="btn-socialtext" onclick="switchTab('socialtext')">SocialText</button></li><li><button id="btn-wfpp" onclick="switchTab('wfpp')">WFPP</button></li>
+      <li><button id="btn-ac" onclick="switchTab('ac')">Academic Commons</button></li><li><button id="btn-culblogs" onclick="switchTab('culblogs')">CUL Blogs</button></li><li><button id="btn-dante" onclick="switchTab('dante')">Dante</button></li><li><button id="btn-libraryweb" onclick="switchTab('libraryweb')">Library Web</button></li><li><button id="btn-podcasts" onclick="switchTab('podcasts')">Podcasts</button></li><li><button id="btn-socialtext" onclick="switchTab('socialtext')">SocialText</button></li><li><button id="btn-wfpp" onclick="switchTab('wfpp')">WFPP</button></li>
     </ul>
     
     <div class="welcome-message">
@@ -283,6 +283,594 @@
   </div>
   
   <p>Generated on 7/23/2025, 1:43:35 PM</p>
+
+    </div>
+    
+    <div id="tab-culblogs" class="tab-content">
+      
+  <h1>CUL Blogs</h1>
+
+  <div class="stats">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Pages Tested</div>
+        <div class="stat-value">23</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Average Score</div>
+        <div class="stat-value"><span class="good">96</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pages Passing (90+)</div>
+        <div class="stat-value">22</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Issues</div>
+        <div class="stat-value">26</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="summary-header">
+    <h2>Site Scores</h2>
+    <div>
+      <button onclick="expandAll()" class="toggle-issues">Expand All Issues</button>
+      <button onclick="collapseAll()" class="toggle-issues">Collapse All Issues</button>
+      
+      
+    </div>
+  </div>
+
+  <div id="category-cul-blogs" class="category-section">
+    <div class="category-header">
+      <h3 class="category-title">CUL Blogs</h3>
+      
+    </div>
+    
+    <div class="category-stats">
+      <span><strong>Pages:</strong> 23</span> | 
+      <span><strong>Avg score:</strong> <span class="good">96</span></span> | 
+      <span><strong>Passing:</strong> 22</span> | 
+      <span><strong>Issues:</strong> 26</span>
+    </div>
+    
+    <table id="table-cul-blogs" class="url-table">
+      <tr>
+        <th>URL</th>
+        <th>Accessibility Score</th>
+        <th>Issues</th>
+        <th>Actions</th>
+      </tr>
+  
+      <tr data-url="https://blogs.library.columbia.edu/journalism">
+        <td><a href="https://blogs.library.columbia.edu/journalism" target="_blank" class="url-link">https://blogs.library.columbia.edu/journalism</a></td>
+        <td><span class="average">88</span></td>
+        <td>3</td>
+        <td>
+          <button id="button-cul-blogs-0" class="toggle-issues" onclick="toggleIssues('cul-blogs-0')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-0" class="issues-container">
+    
+            <div class="issue">
+              <h4>Image elements do not have &lt;code&gt;[alt]&lt;/code&gt; attributes</h4>
+              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt" target="_blank">Learn more about the &lt;code&gt;alt&lt;/code&gt; attribute</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Links do not have a discernible name</h4>
+              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/link-name" target="_blank">Learn how to make links accessible</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/">
+        <td><a href="https://blogs.library.columbia.edu/" target="_blank" class="url-link">https://blogs.library.columbia.edu/</a></td>
+        <td><span class="good">92</span></td>
+        <td>2</td>
+        <td>
+          <button id="button-cul-blogs-1" class="toggle-issues" onclick="toggleIssues('cul-blogs-1')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-1" class="issues-container">
+    
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 18 more</li></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/butler">
+        <td><a href="https://blogs.library.columbia.edu/butler" target="_blank" class="url-link">https://blogs.library.columbia.edu/butler</a></td>
+        <td><span class="good">92</span></td>
+        <td>2</td>
+        <td>
+          <button id="button-cul-blogs-2" class="toggle-issues" onclick="toggleIssues('cul-blogs-2')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-2" class="issues-container">
+    
+            <div class="issue">
+              <h4>Image elements do not have &lt;code&gt;[alt]&lt;/code&gt; attributes</h4>
+              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt" target="_blank">Learn more about the &lt;code&gt;alt&lt;/code&gt; attribute</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/armstrongpapers">
+        <td><a href="https://blogs.library.columbia.edu/armstrongpapers" target="_blank" class="url-link">https://blogs.library.columbia.edu/armstrongpapers</a></td>
+        <td><span class="good">93</span></td>
+        <td>2</td>
+        <td>
+          <button id="button-cul-blogs-3" class="toggle-issues" onclick="toggleIssues('cul-blogs-3')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-3" class="issues-container">
+    
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 4 more</li></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 12 more</li></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/burke">
+        <td><a href="https://blogs.library.columbia.edu/burke" target="_blank" class="url-link">https://blogs.library.columbia.edu/burke</a></td>
+        <td><span class="good">93</span></td>
+        <td>2</td>
+        <td>
+          <button id="button-cul-blogs-4" class="toggle-issues" onclick="toggleIssues('cul-blogs-4')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-4" class="issues-container">
+    
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 4 more</li></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 3 more</li></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/dssc/">
+        <td><a href="https://blogs.library.columbia.edu/dssc/" target="_blank" class="url-link">https://blogs.library.columbia.edu/dssc/</a></td>
+        <td><span class="good">93</span></td>
+        <td>2</td>
+        <td>
+          <button id="button-cul-blogs-5" class="toggle-issues" onclick="toggleIssues('cul-blogs-5')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-5" class="issues-container">
+    
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/jewishstudiesatcul/">
+        <td><a href="https://blogs.library.columbia.edu/jewishstudiesatcul/" target="_blank" class="url-link">https://blogs.library.columbia.edu/jewishstudiesatcul/</a></td>
+        <td><span class="good">93</span></td>
+        <td>2</td>
+        <td>
+          <button id="button-cul-blogs-6" class="toggle-issues" onclick="toggleIssues('cul-blogs-6')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-6" class="issues-container">
+    
+            <div class="issue">
+              <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/tafelarchive">
+        <td><a href="https://blogs.library.columbia.edu/tafelarchive" target="_blank" class="url-link">https://blogs.library.columbia.edu/tafelarchive</a></td>
+        <td><span class="good">93</span></td>
+        <td>2</td>
+        <td>
+          <button id="button-cul-blogs-7" class="toggle-issues" onclick="toggleIssues('cul-blogs-7')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-7" class="issues-container">
+    
+            <div class="issue">
+              <h4>Links do not have a discernible name</h4>
+              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/link-name" target="_blank">Learn how to make links accessible</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 7 more</li></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/the-tinker/">
+        <td><a href="https://blogs.library.columbia.edu/the-tinker/" target="_blank" class="url-link">https://blogs.library.columbia.edu/the-tinker/</a></td>
+        <td><span class="good">93</span></td>
+        <td>2</td>
+        <td>
+          <button id="button-cul-blogs-8" class="toggle-issues" onclick="toggleIssues('cul-blogs-8')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-8" class="issues-container">
+    
+            <div class="issue">
+              <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/archivingalbertellis">
+        <td><a href="https://blogs.library.columbia.edu/archivingalbertellis" target="_blank" class="url-link">https://blogs.library.columbia.edu/archivingalbertellis</a></td>
+        <td><span class="good">96</span></td>
+        <td>1</td>
+        <td>
+          <button id="button-cul-blogs-9" class="toggle-issues" onclick="toggleIssues('cul-blogs-9')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-9" class="issues-container">
+    
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 11 more</li></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/global-studies">
+        <td><a href="https://blogs.library.columbia.edu/global-studies" target="_blank" class="url-link">https://blogs.library.columbia.edu/global-studies</a></td>
+        <td><span class="good">96</span></td>
+        <td>1</td>
+        <td>
+          <button id="button-cul-blogs-10" class="toggle-issues" onclick="toggleIssues('cul-blogs-10')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-10" class="issues-container">
+    
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 8 more</li></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/outdoorsculpture">
+        <td><a href="https://blogs.library.columbia.edu/outdoorsculpture" target="_blank" class="url-link">https://blogs.library.columbia.edu/outdoorsculpture</a></td>
+        <td><span class="good">96</span></td>
+        <td>1</td>
+        <td>
+          <button id="button-cul-blogs-11" class="toggle-issues" onclick="toggleIssues('cul-blogs-11')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-11" class="issues-container">
+    
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 15 more</li></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/clio/">
+        <td><a href="https://blogs.library.columbia.edu/clio/" target="_blank" class="url-link">https://blogs.library.columbia.edu/clio/</a></td>
+        <td><span class="good">97</span></td>
+        <td>1</td>
+        <td>
+          <button id="button-cul-blogs-12" class="toggle-issues" onclick="toggleIssues('cul-blogs-12')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-12" class="issues-container">
+    
+            <div class="issue">
+              <h4>&lt;code&gt;&lt;frame&gt;&lt;/code&gt; or &lt;code&gt;&lt;iframe&gt;&lt;/code&gt; elements do not have a title</h4>
+              <p>Screen reader users rely on frame titles to describe the contents of frames. <a href="https://dequeuniversity.com/rules/axe/4.10/frame-title" target="_blank">Learn more about frame titles</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/makino">
+        <td><a href="https://blogs.library.columbia.edu/makino" target="_blank" class="url-link">https://blogs.library.columbia.edu/makino</a></td>
+        <td><span class="good">97</span></td>
+        <td>1</td>
+        <td>
+          <button id="button-cul-blogs-13" class="toggle-issues" onclick="toggleIssues('cul-blogs-13')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-13" class="issues-container">
+    
+            <div class="issue">
+              <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/music">
+        <td><a href="https://blogs.library.columbia.edu/music" target="_blank" class="url-link">https://blogs.library.columbia.edu/music</a></td>
+        <td><span class="good">97</span></td>
+        <td>1</td>
+        <td>
+          <button id="button-cul-blogs-14" class="toggle-issues" onclick="toggleIssues('cul-blogs-14')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-14" class="issues-container">
+    
+            <div class="issue">
+              <h4>Touch targets do not have sufficient size or spacing.</h4>
+              <p>Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. <a href="https://dequeuniversity.com/rules/axe/4.10/target-size" target="_blank">Learn more about touch targets</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 11 more</li></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/tsl">
+        <td><a href="https://blogs.library.columbia.edu/tsl" target="_blank" class="url-link">https://blogs.library.columbia.edu/tsl</a></td>
+        <td><span class="good">97</span></td>
+        <td>1</td>
+        <td>
+          <button id="button-cul-blogs-15" class="toggle-issues" onclick="toggleIssues('cul-blogs-15')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-15" class="issues-container">
+    
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/avery">
+        <td><a href="https://blogs.library.columbia.edu/avery" target="_blank" class="url-link">https://blogs.library.columbia.edu/avery</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-cul-blogs-16" class="toggle-issues" onclick="toggleIssues('cul-blogs-16')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-16" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/jayprint">
+        <td><a href="https://blogs.library.columbia.edu/jayprint" target="_blank" class="url-link">https://blogs.library.columbia.edu/jayprint</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-cul-blogs-17" class="toggle-issues" onclick="toggleIssues('cul-blogs-17')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-17" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/longview">
+        <td><a href="https://blogs.library.columbia.edu/longview" target="_blank" class="url-link">https://blogs.library.columbia.edu/longview</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-cul-blogs-18" class="toggle-issues" onclick="toggleIssues('cul-blogs-18')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-18" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/rbml">
+        <td><a href="https://blogs.library.columbia.edu/rbml" target="_blank" class="url-link">https://blogs.library.columbia.edu/rbml</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-cul-blogs-19" class="toggle-issues" onclick="toggleIssues('cul-blogs-19')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-19" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/schapiro">
+        <td><a href="https://blogs.library.columbia.edu/schapiro" target="_blank" class="url-link">https://blogs.library.columbia.edu/schapiro</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-cul-blogs-20" class="toggle-issues" onclick="toggleIssues('cul-blogs-20')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-20" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/spotlights">
+        <td><a href="https://blogs.library.columbia.edu/spotlights" target="_blank" class="url-link">https://blogs.library.columbia.edu/spotlights</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-cul-blogs-21" class="toggle-issues" onclick="toggleIssues('cul-blogs-21')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-21" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+      <tr data-url="https://blogs.library.columbia.edu/starr">
+        <td><a href="https://blogs.library.columbia.edu/starr" target="_blank" class="url-link">https://blogs.library.columbia.edu/starr</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
+        <td>
+          <button id="button-cul-blogs-22" class="toggle-issues" onclick="toggleIssues('cul-blogs-22')">Show Issues</button>
+        </td>
+      </tr>
+      <tr class="issues-row">
+        <td colspan="4">
+          <div id="issues-cul-blogs-22" class="issues-container">
+    <p>No accessibility issues found!</p>
+          </div>
+        </td>
+      </tr>
+    
+    </table>
+  </div>
+  
+  <p>Generated on 7/29/2025, 4:56:32 PM</p>
 
     </div>
     
