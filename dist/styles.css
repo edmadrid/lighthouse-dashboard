@@ -6,7 +6,8 @@ body {
   line-height: 1.5;
 }
 h1 { 
-  color: #333; 
+  color: #333;
+  font-weight: 300;
 }
 h2 {
   font-size: 2rem;
@@ -20,7 +21,7 @@ table {
 }
 th, td { 
   border: 1px solid #ddd; 
-  padding: 12px; 
+  padding: 12px;
   text-align: left; 
 }
 th { 

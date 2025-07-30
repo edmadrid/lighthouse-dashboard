@@ -222,17 +222,6 @@ summaryHTML += `
       </div>
     </div>
   </div>
-  
-  
-  <div class="summary-header">
-    <h2>Site Scores</h2>
-    <div>
-      <button onclick="expandAll()" class="toggle-issues">Expand All Issues</button>
-      <button onclick="collapseAll()" class="toggle-issues">Collapse All Issues</button>
-      <button onclick="toggleAllUrls(true)" class="toggle-issues">Show All URLs</button>
-      <button onclick="toggleAllUrls(false)" class="toggle-issues">Hide All URLs</button>
-    </div>
-  </div>
 `;
 
 // Group reports by category

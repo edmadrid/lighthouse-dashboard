@@ -89,19 +89,8 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Total Issues</div>
-        <div class="stat-value">0</div>
+        <div class="stat-value">1</div>
       </div>
-    </div>
-  </div>
-  
-  
-  <div class="summary-header">
-    <h2>Site Scores</h2>
-    <div>
-      <button onclick="expandAll()" class="toggle-issues">Expand All Issues</button>
-      <button onclick="collapseAll()" class="toggle-issues">Collapse All Issues</button>
-      <button onclick="toggleAllUrls(true)" class="toggle-issues">Show All URLs</button>
-      <button onclick="toggleAllUrls(false)" class="toggle-issues">Hide All URLs</button>
     </div>
   </div>
 
@@ -115,7 +104,7 @@
       <span><strong>Pages:</strong> 4</span> | 
       <span><strong>Avg score:</strong> <span class="good">100</span></span> | 
       <span><strong>Passing:</strong> 4</span> | 
-      <span><strong>Issues:</strong> 0</span>
+      <span><strong>Issues:</strong> 1</span>
     </div>
     
     <table id="table-academic-commons" class="url-table">
@@ -177,7 +166,7 @@
       <tr data-url="https://academiccommons.columbia.edu/search?search_field=all_fields&q=">
         <td><a href="https://academiccommons.columbia.edu/search?search_field=all_fields&q=" target="_blank" class="url-link">https://academiccommons.columbia.edu/search?search_field=all_fields&q=</a></td>
         <td><span class="good">100</span></td>
-        <td>0</td>
+        <td>1</td>
         <td>
           <button id="button-academic-commons-3" class="toggle-issues" onclick="toggleIssues('academic-commons-3')">Show Issues</button>
         </td>
@@ -185,7 +174,13 @@
       <tr class="issues-row">
         <td colspan="4">
           <div id="issues-academic-commons-3" class="issues-container">
-    <p>No accessibility issues found!</p>
+    
+            <div class="issue">
+              <h4>Elements with visible text labels do not have matching accessible names.</h4>
+              <p>Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch" target="_blank">Learn more about accessible names</a>.</p>
+        <p><strong>Examples:</strong></p><ul></ul>
+            </div>
+        
           </div>
         </td>
       </tr>
@@ -193,6 +188,6 @@
     </table>
   </div>
   
-  <p>Generated on 7/23/2025, 1:43:35 PM</p>
+  <p>Generated on 7/30/2025, 10:35:58 AM</p>
 </body>
 </html>
