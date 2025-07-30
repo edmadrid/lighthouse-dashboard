@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lighthouse Accessibility Dashboard - dante</title>
+  <title>CUL Accessibility Dashboard - dante</title>
   <link rel="stylesheet" href="styles.css">
   <script>
   function toggleIssues(urlId) {
@@ -40,7 +40,6 @@
     });
   }
 
-  
   function toggleUrlVisibility(categoryId) {
     const urlTable = document.getElementById('table-' + categoryId);
     const toggleButton = document.getElementById('toggle-' + categoryId);
@@ -71,7 +70,7 @@
 </script>
 </head>
 <body>
-  <h1>Lighthouse Accessibility Dashboard - dante</h1>
+  <h1>CUL Accessibility Dashboard - dante</h1>
 
   <div class="stats">
     <div class="stats-grid">
@@ -93,30 +92,8 @@
       </div>
     </div>
   </div>
-  
-  
-  <div class="summary-header">
-    <h2>Site Scores</h2>
-    <div>
-      <button onclick="expandAll()" class="toggle-issues">Expand All Issues</button>
-      <button onclick="collapseAll()" class="toggle-issues">Collapse All Issues</button>
-      <button onclick="toggleAllUrls(true)" class="toggle-issues">Show All URLs</button>
-      <button onclick="toggleAllUrls(false)" class="toggle-issues">Hide All URLs</button>
-    </div>
-  </div>
 
   <div id="category-dante" class="category-section">
-    <div class="category-header">
-      <h3 class="category-title">Dante</h3>
-      <button id="toggle-dante" class="toggle-issues toggle-urls" onclick="toggleUrlVisibility('dante')">Show URLs</button>
-    </div>
-    
-    <div class="category-stats">
-      <span><strong>Pages:</strong> 1</span> | 
-      <span><strong>Avg score:</strong> <span class="good">100</span></span> | 
-      <span><strong>Passing:</strong> 1</span> | 
-      <span><strong>Issues:</strong> 0</span>
-    </div>
     
     <table id="table-dante" class="url-table">
       <tr>
@@ -145,6 +122,6 @@
     </table>
   </div>
   
-  <p>Generated on 7/24/2025, 9:50:26 AM</p>
+  <p>Generated on 7/30/2025, 11:37:03 AM</p>
 </body>
 </html>

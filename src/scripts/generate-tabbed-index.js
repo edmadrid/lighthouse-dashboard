@@ -17,7 +17,7 @@ function extractTitle(htmlContent) {
   const titleMatch = htmlContent.match(/<title[^>]*>(.*?)<\/title>/i);
   if (!titleMatch) return '';
   
-  return titleMatch[1].replace('Lighthouse Accessibility Dashboard - ', '');
+  return titleMatch[1].replace('CUL Accessibility Dashboard - ', '');
 }
 
 function extractTitleFromJson(filename) {
@@ -94,7 +94,7 @@ function generateTabbedIndex() {
       
       // Replace the h1 title in the content with the proper title
       let updatedContent = bodyContent.replace(
-        /<h1>Lighthouse Accessibility Dashboard - [^<]*<\/h1>/,
+        /<h1>CUL Accessibility Dashboard - [^<]*<\/h1>/,
         `<h1>${title}</h1>`
       );
       
@@ -130,37 +130,6 @@ function generateTabbedIndex() {
   <meta name="robots" content="noindex">
   <title>CUL Accessibility Dashboard</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .welcome-message {
-      text-align: center;
-      padding: 40px 20px;
-      color: #666;
-      font-size: 18px;
-    }
-    
-    .main-header {
-      text-align: center;
-      padding: 20px 0;
-    }
-    
-    .main-header h1 {
-      color: #333;
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    .main-header a {
-      color: #000;
-      text-decoration: none;
-    }
-    
-    /* Override nested h1 styles in tab content */
-    .tab-content h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: #333;
-    }
-  </style>
   <script>
     ${dashboardScript}
     

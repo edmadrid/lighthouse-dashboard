@@ -49,8 +49,6 @@ function sanitizeHTML(text) {
   return sanitized;
 }
 
-// No longer need embedded CSS - using external stylesheet
-
 // JavaScript for the HTML
 const javaScript = `
   function toggleIssues(urlId) {
@@ -88,7 +86,6 @@ const javaScript = `
     });
   }
 
-  
   function toggleUrlVisibility(categoryId) {
     const urlTable = document.getElementById('table-' + categoryId);
     const toggleButton = document.getElementById('toggle-' + categoryId);
@@ -123,12 +120,12 @@ let summaryHTML = `
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lighthouse Accessibility Dashboard - ${baseName}</title>
+  <title>CUL Accessibility Dashboard - ${baseName}</title>
   <link rel="stylesheet" href="styles.css">
   <script>${javaScript}</script>
 </head>
 <body>
-  <h1>Lighthouse Accessibility Dashboard - ${baseName}</h1>
+  <h1>CUL Accessibility Dashboard - ${baseName}</h1>
 `;
 
 // Read the URLs from the JSON file
