@@ -345,7 +345,7 @@ sortedCategories.forEach(category => {
 
 // Close HTML
 summaryHTML += `
-  <p>Generated on ${new Date().toLocaleString()}</p>
+  <footer>Generated on ${new Date().toLocaleString()}</footer>
 </body>
 </html>
 `;
