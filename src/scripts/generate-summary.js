@@ -257,10 +257,6 @@ sortedCategories.forEach(category => {
   
   summaryHTML += `
   <div id="category-${categoryId}" class="category-section">
-    <div class="category-header">
-      <h3 class="category-title">${category}</h3>
-      <button id="toggle-${categoryId}" class="toggle-issues toggle-urls" onclick="toggleUrlVisibility('${categoryId}')">Show URLs</button>
-    </div>
     
     <div class="category-stats">
       <span><strong>Pages:</strong> ${categoryReports.length}</span> | 
