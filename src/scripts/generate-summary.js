@@ -258,13 +258,6 @@ sortedCategories.forEach(category => {
   summaryHTML += `
   <div id="category-${categoryId}" class="category-section">
     
-    <div class="category-stats">
-      <span><strong>Pages:</strong> ${categoryReports.length}</span> | 
-      <span><strong>Avg score:</strong> <span class="${avgCategoryClass}">${avgCategoryScore}</span></span> | 
-      <span><strong>Passing:</strong> ${categoryPassing}</span> | 
-      <span><strong>Issues:</strong> ${categoryIssues}</span>
-    </div>
-    
     <table id="table-${categoryId}" class="url-table">
       <tr>
         <th>URL</th>
