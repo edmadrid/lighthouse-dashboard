@@ -1,35 +1,37 @@
 :root {
-  /* Colors */
+
+  /* colors */
   --color-primary: #0366d6;
   --color-success: #0cce6b;
   --color-warning: #ffa400;
   --color-danger: #ff4e42;
   
-  /* Text colors */
-  --color-text-primary: #333;
+  /* text colors */
+  --color-text-primary: #222;
   --color-text-secondary: #555;
+  --color-text-light: #aaa;
   --color-black: #000;
   --color-white: #fff;
   
-  /* Background colors */
+  /* background colors */
   --color-bg-light: #f9f9f9;
   --color-bg-lighter: #f5f5f5;
   --color-bg-border: #e5e5e5;
   --color-border: #ddd;
   
-  /* Shadows */
+  /* shadows */
   --shadow-light: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-medium: 0 1px 3px rgba(0,0,0,0.1);
   
-  /* Typography */
+  /* typography */
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-mono: monospace;
   
-  /* Border radius */
+  /* border radius */
   --border-radius: 4px;
   --border-radius-sm: 3px;
   
-  /* Max width */
+  /* max width */
   --max-width: 1200px;
 }
 
@@ -42,6 +44,7 @@ body {
 }
 
 /* headings */
+
 h1 {
   color: var(--color-text-primary);
 }
@@ -53,6 +56,7 @@ h2 {
 }
 
 /* main header */
+
 .main-header h1 {
   font-size: 1.5rem;
   font-weight: 300;
@@ -67,6 +71,7 @@ h2 {
 }
 
 /* tables */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -86,6 +91,7 @@ th {
 }
 
 /* badges */
+
 .good {
   background-color: var(--color-success);
   color: var(--color-white);
@@ -111,6 +117,7 @@ th {
 }
 
 /* issues */
+
 .issues-container {
   margin-top: 10px;
   display: none;
@@ -139,6 +146,7 @@ th {
 }
 
 /* toggle */
+
 .toggle-issues {
   background-color: var(--color-bg-lighter);
   border: 1px solid var(--color-border);
@@ -165,6 +173,7 @@ th {
 }
 
 /* stats */
+
 .stats {
   background-color: var(--color-bg-lighter);
   border: 1px solid var(--color-border);
@@ -219,7 +228,8 @@ code {
   font-size: 0.9em;
 }
 
-/* tab styles for index.html */
+/* tabs */
+
 .tab-container {
   margin-bottom: 20px;
 }
@@ -276,9 +286,15 @@ code {
   display: block;
 }
 
-.welcome-message {
+/* .welcome-message {
   text-align: center;
   padding: 40px 20px;
   color: var(--color-text-secondary);
   font-size: 18px;
+} */
+
+/* footer */
+
+footer {
+  color: var(--color-text-light);
 }
