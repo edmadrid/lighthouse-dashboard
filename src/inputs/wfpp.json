@@ -1,5 +1,8 @@
 {
   "WFPP": [
-    "https://wfpp.columbia.edu"
+    {
+      "url": "https://wfpp.columbia.edu",
+      "title": "Front page"
+    }
   ]
 }

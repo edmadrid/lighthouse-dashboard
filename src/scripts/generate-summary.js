@@ -130,15 +130,32 @@ let summaryHTML = `
 
 // Read the URLs from the JSON file
 let sitesByCategory = {};
+let urlTitles = {}; // Map URL -> title
 try {
   if (fs.existsSync(path.join(__dirname, `../inputs/${inputFileName}`))) {
     const jsonContent = fs.readFileSync(path.join(__dirname, `../inputs/${inputFileName}`), 'utf8');
     sitesByCategory = JSON.parse(jsonContent);
     console.log(`Read ${Object.keys(sitesByCategory).length} categories from ${inputFileName}`);
     
+    // Extract URL titles and normalize sitesByCategory to contain only URLs
+    for (const [category, items] of Object.entries(sitesByCategory)) {
+      sitesByCategory[category] = items.map(item => {
+        if (typeof item === 'string') {
+          return item;
+        } else if (typeof item === 'object' && item.url) {
+          if (item.title) {
+            urlTitles[item.url] = item.title;
+          }
+          return item.url;
+        }
+        return null;
+      }).filter(Boolean);
+    }
+    
     // Count total URLs
     const totalUrls = Object.values(sitesByCategory).reduce((total, urls) => total + urls.length, 0);
     console.log(`Total URLs in ${inputFileName}: ${totalUrls}`);
+    console.log(`URLs with titles: ${Object.keys(urlTitles).length}`);
   } else {
     console.log(`${inputFileName} not found, will use report files to determine URLs`);
   }
@@ -272,9 +289,17 @@ sortedCategories.forEach(category => {
     const scoreClass = report.score >= 90 ? 'good' : (report.score >= 50 ? 'average' : 'poor');
     const urlId = `${categoryId}-${index}`;
     
+    // Get title for this URL if available, checking both with and without trailing slash
+    const normalizedReportUrl = report.url.replace(/\/$/, '');
+    const urlTitle = urlTitles[report.url] || urlTitles[normalizedReportUrl] || urlTitles[report.url + '/'] || urlTitles[normalizedReportUrl + '/'];
+    
+    const displayContent = urlTitle ? 
+      `${urlTitle}: <a href="${report.url}" target="_blank" class="url-link">${report.url}</a>` : 
+      `<a href="${report.url}" target="_blank" class="url-link">${report.url}</a>`;
+    
     summaryHTML += `
       <tr data-url="${report.url}">
-        <td><a href="${report.url}" target="_blank" class="url-link">${report.url}</a></td>
+        <td>${displayContent}</td>
         <td><span class="${scoreClass}">${report.score}</span></td>
         <td>${report.issues.length}</td>
         <td>

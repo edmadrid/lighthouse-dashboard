@@ -1,10 +1,28 @@
 {
   "Library Web": [
-    "https://library.columbia.edu",
-    "https://clio.columbia.edu/",
-    "https://hours.library.columbia.edu/",
-    "https://findingaids.library.columbia.edu/",
-    "https://columbiaandslavery.columbia.edu/",
-    "https://amesa.library.columbia.edu/"
+    {
+      "url": "https://library.columbia.edu",
+      "title": "Front page"
+    },
+    {
+      "url": "https://clio.columbia.edu/",
+      "title": "Front page"
+    },
+    {
+      "url": "https://hours.library.columbia.edu/",
+      "title": "Front page"
+    },
+    {
+      "url": "https://findingaids.library.columbia.edu/",
+      "title": "Front page"
+    },
+    {
+      "url": "https://columbiaandslavery.columbia.edu/",
+      "title": "Front page"
+    },
+    {
+      "url": "https://amesa.library.columbia.edu/",
+      "title": "Front page"
+    }
   ]
 }

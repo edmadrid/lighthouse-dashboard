@@ -1,5 +1,8 @@
 {
   "DLC": [
-    "https://dlc.library.columbia.edu"
+    {
+      "url": "https://dlc.library.columbia.edu",
+      "title": "Front page"
+    }
   ]
 }

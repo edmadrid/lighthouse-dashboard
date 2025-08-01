@@ -1,5 +1,8 @@
 {
   "Dante": [
-    "https://digitaldante.columbia.edu"
+    {
+      "url": "https://digitaldante.columbia.edu",
+      "title": "Front page"
+    }
   ]
 }

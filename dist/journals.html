@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CUL Accessibility Dashboard - socialtext</title>
+  <title>CUL Accessibility Dashboard - journals</title>
   <link rel="stylesheet" href="styles.css">
   <script>
   function toggleIssues(urlId) {
@@ -70,7 +70,7 @@
 </script>
 </head>
 <body>
-  <h1>CUL Accessibility Dashboard - socialtext</h1>
+  <h1>CUL Accessibility Dashboard - journals</h1>
 
   <div class="stats">
     <div class="stats-grid">
@@ -80,22 +80,22 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Average Score</div>
-        <div class="stat-value"><span class="average">87</span></div>
+        <div class="stat-value"><span class="good">100</span></div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Pages Passing (90+)</div>
-        <div class="stat-value">0</div>
+        <div class="stat-value">1</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Total Issues</div>
-        <div class="stat-value">3</div>
+        <div class="stat-value">0</div>
       </div>
     </div>
   </div>
 
-  <div id="category-socialtext" class="category-section">
+  <div id="category-journals" class="category-section">
     
-    <table id="table-socialtext" class="url-table">
+    <table id="table-journals" class="url-table">
       <tr>
         <th>URL</th>
         <th>Accessibility Score</th>
@@ -103,36 +103,18 @@
         <th>Actions</th>
       </tr>
   
-      <tr data-url="https://socialtextjournal.org/">
-        <td>Front page: <a href="https://socialtextjournal.org/" target="_blank" class="url-link">https://socialtextjournal.org/</a></td>
-        <td><span class="average">87</span></td>
-        <td>3</td>
+      <tr data-url="https://journals.library.columbia.edu/">
+        <td>Journals index page: <a href="https://journals.library.columbia.edu/" target="_blank" class="url-link">https://journals.library.columbia.edu/</a></td>
+        <td><span class="good">100</span></td>
+        <td>0</td>
         <td>
-          <button id="button-socialtext-0" class="toggle-issues" onclick="toggleIssues('socialtext-0')">Show Issues</button>
+          <button id="button-journals-0" class="toggle-issues" onclick="toggleIssues('journals-0')">Show Issues</button>
         </td>
       </tr>
       <tr class="issues-row">
         <td colspan="4">
-          <div id="issues-socialtext-0" class="issues-container">
-    
-            <div class="issue">
-              <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 42 more</li></ul>
-            </div>
-        
-            <div class="issue">
-              <h4>Image elements do not have &lt;code&gt;[alt]&lt;/code&gt; attributes</h4>
-              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://web.dev/image-alt/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
-            </div>
-        
-            <div class="issue">
-              <h4>Links do not have a discernible name</h4>
-              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://web.dev/link-name/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul><li>... and 11 more</li></ul>
-            </div>
-        
+          <div id="issues-journals-0" class="issues-container">
+    <p>No accessibility issues found!</p>
           </div>
         </td>
       </tr>
@@ -140,6 +122,6 @@
     </table>
   </div>
   
-  <footer>Generated on 8/1/2025, 12:24:15 PM</footer>
+  <footer>Generated on 8/1/2025, 12:23:14 PM</footer>
 </body>
 </html>

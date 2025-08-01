@@ -1,5 +1,8 @@
 {
   "Journals": [
-    "https://journals.library.columbia.edu"
+    {
+      "url": "https://journals.library.columbia.edu",
+      "title": "Journals index page"
+    }
   ]
 }

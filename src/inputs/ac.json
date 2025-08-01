@@ -1,8 +1,14 @@
 {
   "Academic Commons": [
-    "https://academiccommons.columbia.edu",
+    {
+      "url": "https://academiccommons.columbia.edu",
+      "title": "Front page"
+    },
     "https://academiccommons.columbia.edu/explore",
     "https://academiccommons.columbia.edu/search?search_field=all_fields&q=",
-    "https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH"
+    {
+      "url": "https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH",
+      "title": "Item page"
+    }
   ]
 }

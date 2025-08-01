@@ -41,7 +41,14 @@ try {
     // Flatten all URLs from all categories
     for (const category in data) {
         if (Array.isArray(data[category])) {
-            allUrls.push(...data[category]);
+            data[category].forEach(item => {
+                // Handle both string URLs and object URLs with titles
+                if (typeof item === 'string') {
+                    allUrls.push(item);
+                } else if (typeof item === 'object' && item.url) {
+                    allUrls.push(item.url);
+                }
+            });
         }
     }
     

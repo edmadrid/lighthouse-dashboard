@@ -1,5 +1,8 @@
 {
   "SocialText": [
-    "https://socialtextjournal.org"
+    {
+      "url": "https://socialtextjournal.org",
+      "title": "Front page"
+    }
   ]
 }
