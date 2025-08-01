@@ -109,9 +109,9 @@ const javaScript = `
     });
   }
   
-  // Hide all URL tables by default when page loads
+  // Show all URL tables by default when page loads
   window.addEventListener('DOMContentLoaded', function() {
-    toggleAllUrls(false);
+    toggleAllUrls(true);
   });
 `;
 
@@ -125,7 +125,10 @@ let summaryHTML = `
   <script>${javaScript}</script>
 </head>
 <body>
-  <h1>CUL Accessibility Dashboard - ${baseName}</h1>
+  <div class="tab-header">
+    <h1><a href="/">CUL Accessibility Dashboard</a>: <strong>${baseName.toUpperCase()}</strong></h1>
+    <span class="tab-meta">Generated on ${new Date().toLocaleString()}</span>
+  </div>
 `;
 
 // Read the URLs from the JSON file
@@ -326,7 +329,8 @@ sortedCategories.forEach(category => {
         `;
         
         if (issue.details && issue.details.items && issue.details.items.length > 0) {
-          summaryHTML += `<p><strong>Examples:</strong></p><ul>`;
+          let hasExamples = false;
+          let examplesHTML = '';
           
           // Show up to 3 examples
           issue.details.items.slice(0, 3).forEach(item => {
@@ -338,15 +342,20 @@ sortedCategories.forEach(category => {
               }
             }
             if (itemDetails) {
-              summaryHTML += `<li>${itemDetails.slice(0, -2)}</li>`;
+              examplesHTML += `<li>${itemDetails.slice(0, -2)}</li>`;
+              hasExamples = true;
             }
           });
           
           if (issue.details.items.length > 3) {
-            summaryHTML += `<li>... and ${issue.details.items.length - 3} more</li>`;
+            examplesHTML += `<li>... and ${issue.details.items.length - 3} more</li>`;
+            hasExamples = true;
           }
           
-          summaryHTML += `</ul>`;
+          // Only add the Examples section if we have actual examples to show
+          if (hasExamples) {
+            summaryHTML += `<p><strong>Examples:</strong></p><ul>${examplesHTML}</ul>`;
+          }
         }
         
         summaryHTML += `

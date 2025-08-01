@@ -37,6 +37,14 @@ function extractTitleFromJson(filename) {
   return null;
 }
 
+function extractGeneratedDate(htmlContent) {
+  const footerMatch = htmlContent.match(/<footer>Generated on ([^<]*)<\/footer>/i);
+  if (footerMatch) {
+    return footerMatch[1];
+  }
+  return new Date().toLocaleString();
+}
+
 function extractStyles(htmlContent) {
   const styleMatch = htmlContent.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
   if (!styleMatch) return '';
@@ -86,16 +94,29 @@ function generateTabbedIndex() {
       
       const bodyContent = extractBodyContent(htmlContent);
       const scripts = extractScripts(htmlContent);
+      const generatedDate = extractGeneratedDate(htmlContent);
       
       if (scripts && !dashboardScript) {
         // Only take the script from the first dashboard to avoid duplicates
         dashboardScript = scripts;
       }
       
-      // Replace the h1 title in the content with the proper title
+      // Replace the h1 title and add permalink/date with flexbox layout
       let updatedContent = bodyContent.replace(
         /<h1>CUL Accessibility Dashboard - [^<]*<\/h1>/,
-        `<h1>${title}</h1>`
+        `<div class="tab-header"><h2>${title}</h2><span class="tab-meta"><a href="${filename}" target="_blank">Permalink</a> | Generated on ${generatedDate}</span></div>`
+      );
+      
+      // Also replace the new banner format if present
+      updatedContent = updatedContent.replace(
+        /<div class="main-header">\s*<h1><a href="\/">CUL Accessibility Dashboard<\/a>: <strong>[^<]*<\/strong><\/h1>\s*<\/div>/,
+        `<div class="tab-header"><h2>${title}</h2><span class="tab-meta"><a href="${filename}" target="_blank">Permalink</a> | Generated on ${generatedDate}</span></div>`
+      );
+      
+      // Also replace the existing tab-header format if present
+      updatedContent = updatedContent.replace(
+        /<div class="tab-header">\s*<h1><a href="\/">CUL Accessibility Dashboard<\/a>: <strong>[^<]*<\/strong><\/h1>\s*<span class="tab-meta">Generated on [^<]*<\/span>\s*<\/div>/,
+        `<div class="tab-header"><h2>${title}</h2><span class="tab-meta"><a href="${filename}" target="_blank">Permalink</a> | Generated on ${generatedDate}</span></div>`
       );
       
       // Remove the toggle buttons for showing/hiding URLs
@@ -117,7 +138,9 @@ function generateTabbedIndex() {
       tabs.push({
         id: baseFilename,
         title: title,
-        content: updatedContent
+        content: updatedContent,
+        generatedDate: generatedDate,
+        filename: filename
       });
     });
 

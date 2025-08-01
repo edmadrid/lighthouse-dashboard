@@ -63,14 +63,17 @@
     });
   }
   
-  // Hide all URL tables by default when page loads
+  // Show all URL tables by default when page loads
   window.addEventListener('DOMContentLoaded', function() {
-    toggleAllUrls(false);
+    toggleAllUrls(true);
   });
 </script>
 </head>
 <body>
-  <h1>CUL Accessibility Dashboard - dlc</h1>
+  <div class="tab-header">
+    <h1><a href="/">CUL Accessibility Dashboard</a>: <strong>DLC</strong></h1>
+    <span class="tab-meta">Generated on 8/1/2025, 2:06:47 PM</span>
+  </div>
 
   <div class="stats">
     <div class="stats-grid">
@@ -118,13 +121,13 @@
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
               <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
             <div class="issue">
               <h4>Some elements have a &lt;code&gt;[tabindex]&lt;/code&gt; value greater than 0</h4>
               <p>A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. <a href="https://web.dev/tabindex/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
           </div>
@@ -134,6 +137,6 @@
     </table>
   </div>
   
-  <footer>Generated on 8/1/2025, 12:23:00 PM</footer>
+  <footer>Generated on 8/1/2025, 2:06:47 PM</footer>
 </body>
 </html>

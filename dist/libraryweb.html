@@ -63,14 +63,17 @@
     });
   }
   
-  // Hide all URL tables by default when page loads
+  // Show all URL tables by default when page loads
   window.addEventListener('DOMContentLoaded', function() {
-    toggleAllUrls(false);
+    toggleAllUrls(true);
   });
 </script>
 </head>
 <body>
-  <h1>CUL Accessibility Dashboard - libraryweb</h1>
+  <div class="tab-header">
+    <h1><a href="/">CUL Accessibility Dashboard</a>: <strong>LIBRARYWEB</strong></h1>
+    <span class="tab-meta">Generated on 8/1/2025, 2:07:46 PM</span>
+  </div>
 
   <div class="stats">
     <div class="stats-grid">
@@ -124,31 +127,31 @@
             <div class="issue">
               <h4>&lt;code&gt;&lt;html&gt;&lt;/code&gt; element does not have a &lt;code&gt;[lang]&lt;/code&gt; attribute</h4>
               <p>If a page doesn't specify a lang attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. <a href="https://web.dev/html-has-lang/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
             <div class="issue">
               <h4>Image elements do not have &lt;code&gt;[alt]&lt;/code&gt; attributes</h4>
               <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://web.dev/image-alt/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
             <div class="issue">
               <h4>Links do not have a discernible name</h4>
               <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://web.dev/link-name/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
             <div class="issue">
               <h4>Lists do not contain only &lt;code&gt;&lt;li&gt;&lt;/code&gt; elements and script supporting elements (&lt;code&gt;&lt;script&gt;&lt;/code&gt; and &lt;code&gt;&lt;template&gt;&lt;/code&gt;).</h4>
               <p>Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. <a href="https://web.dev/list/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
             <div class="issue">
               <h4>List items (&lt;code&gt;&lt;li&gt;&lt;/code&gt;) are not contained within &lt;code&gt;&lt;ul&gt;&lt;/code&gt; or &lt;code&gt;&lt;ol&gt;&lt;/code&gt; parent elements.</h4>
               <p>Screen readers require list items (&lt;code&gt;&lt;li&gt;&lt;/code&gt;) to be contained within a parent &lt;code&gt;&lt;ul&gt;&lt;/code&gt; or &lt;code&gt;&lt;ol&gt;&lt;/code&gt; to be announced properly. <a href="https://web.dev/listitem/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
           </div>
@@ -170,19 +173,19 @@
             <div class="issue">
               <h4>Elements with an ARIA &lt;code&gt;[role]&lt;/code&gt; that require children to contain a specific &lt;code&gt;[role]&lt;/code&gt; are missing some or all of those required children.</h4>
               <p>Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. <a href="https://web.dev/aria-required-children/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
               <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
             <div class="issue">
               <h4>&lt;code&gt;&lt;html&gt;&lt;/code&gt; element does not have a &lt;code&gt;[lang]&lt;/code&gt; attribute</h4>
               <p>If a page doesn't specify a lang attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. <a href="https://web.dev/html-has-lang/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
           </div>
@@ -210,7 +213,7 @@
             <div class="issue">
               <h4>ARIA IDs are not unique</h4>
               <p>The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. <a href="https://web.dev/duplicate-id-aria/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
           </div>
@@ -282,7 +285,7 @@
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
               <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
-        <p><strong>Examples:</strong></p><ul></ul>
+        
             </div>
         
           </div>
@@ -292,6 +295,6 @@
     </table>
   </div>
   
-  <footer>Generated on 8/1/2025, 12:23:58 PM</footer>
+  <footer>Generated on 8/1/2025, 2:07:46 PM</footer>
 </body>
 </html>

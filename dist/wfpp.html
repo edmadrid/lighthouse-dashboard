@@ -63,14 +63,17 @@
     });
   }
   
-  // Hide all URL tables by default when page loads
+  // Show all URL tables by default when page loads
   window.addEventListener('DOMContentLoaded', function() {
-    toggleAllUrls(false);
+    toggleAllUrls(true);
   });
 </script>
 </head>
 <body>
-  <h1>CUL Accessibility Dashboard - wfpp</h1>
+  <div class="tab-header">
+    <h1><a href="/">CUL Accessibility Dashboard</a>: <strong>WFPP</strong></h1>
+    <span class="tab-meta">Generated on 8/1/2025, 2:08:18 PM</span>
+  </div>
 
   <div class="stats">
     <div class="stats-grid">
@@ -122,6 +125,6 @@
     </table>
   </div>
   
-  <footer>Generated on 8/1/2025, 12:24:37 PM</footer>
+  <footer>Generated on 8/1/2025, 2:08:18 PM</footer>
 </body>
 </html>
