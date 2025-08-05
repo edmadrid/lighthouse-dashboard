@@ -72,7 +72,7 @@
 <body>
   <div class="tab-header">
     <h1><a href="/">CUL Accessibility Dashboard</a>: <strong>SOCIALTEXT</strong></h1>
-    <span class="tab-meta">Generated on 8/1/2025, 2:08:06 PM</span>
+    <span class="tab-meta">Generated on 8/5/2025, 11:43:43 AM</span>
   </div>
 
   <div class="stats">
@@ -83,7 +83,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Average Score</div>
-        <div class="stat-value"><span class="average">87</span></div>
+        <div class="stat-value"><span class="average">83</span></div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Pages Passing (90+)</div>
@@ -91,7 +91,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Total Issues</div>
-        <div class="stat-value">3</div>
+        <div class="stat-value">4</div>
       </div>
     </div>
   </div>
@@ -100,6 +100,7 @@
     
     <table id="table-socialtext" class="url-table">
       <tr>
+        <th>Page</th>
         <th>URL</th>
         <th>Accessibility Score</th>
         <th>Issues</th>
@@ -107,32 +108,39 @@
       </tr>
   
       <tr data-url="https://socialtextjournal.org/">
-        <td>Front page: <a href="https://socialtextjournal.org/" target="_blank" class="url-link">https://socialtextjournal.org/</a></td>
-        <td><span class="average">87</span></td>
-        <td>3</td>
+        <td>Front page</td>
+        <td><a href="https://socialtextjournal.org/" target="_blank" class="url-link">https://socialtextjournal.org/</a></td>
+        <td><span class="average">83</span></td>
+        <td>4</td>
         <td>
           <button id="button-socialtext-0" class="toggle-issues" onclick="toggleIssues('socialtext-0')">Show Issues</button>
         </td>
       </tr>
       <tr class="issues-row">
-        <td colspan="4">
+        <td colspan="5">
           <div id="issues-socialtext-0" class="issues-container">
     
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
         <p><strong>Examples:</strong></p><ul><li>... and 42 more</li></ul>
             </div>
         
             <div class="issue">
               <h4>Image elements do not have &lt;code&gt;[alt]&lt;/code&gt; attributes</h4>
-              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://web.dev/image-alt/" target="_blank">Learn more</a>.</p>
+              <p>Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt" target="_blank">Learn more about the &lt;code&gt;alt&lt;/code&gt; attribute</a>.</p>
+        <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
+            </div>
+        
+            <div class="issue">
+              <h4>Links rely on color to be distinguishable.</h4>
+              <p>Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block" target="_blank">Learn how to make links distinguishable</a>.</p>
         <p><strong>Examples:</strong></p><ul><li>... and 1 more</li></ul>
             </div>
         
             <div class="issue">
               <h4>Links do not have a discernible name</h4>
-              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://web.dev/link-name/" target="_blank">Learn more</a>.</p>
+              <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/link-name" target="_blank">Learn how to make links accessible</a>.</p>
         <p><strong>Examples:</strong></p><ul><li>... and 11 more</li></ul>
             </div>
         
@@ -143,6 +151,6 @@
     </table>
   </div>
   
-  <footer>Generated on 8/1/2025, 2:08:06 PM</footer>
+  <footer>Generated on 8/5/2025, 11:43:43 AM</footer>
 </body>
 </html>

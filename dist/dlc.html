@@ -72,7 +72,7 @@
 <body>
   <div class="tab-header">
     <h1><a href="/">CUL Accessibility Dashboard</a>: <strong>DLC</strong></h1>
-    <span class="tab-meta">Generated on 8/1/2025, 2:06:47 PM</span>
+    <span class="tab-meta">Generated on 8/5/2025, 11:46:02 AM</span>
   </div>
 
   <div class="stats">
@@ -83,7 +83,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Average Score</div>
-        <div class="stat-value"><span class="good">96</span></div>
+        <div class="stat-value"><span class="good">92</span></div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Pages Passing (90+)</div>
@@ -100,6 +100,7 @@
     
     <table id="table-dlc" class="url-table">
       <tr>
+        <th>Page</th>
         <th>URL</th>
         <th>Accessibility Score</th>
         <th>Issues</th>
@@ -107,26 +108,27 @@
       </tr>
   
       <tr data-url="https://dlc.library.columbia.edu/">
-        <td>Front page: <a href="https://dlc.library.columbia.edu/" target="_blank" class="url-link">https://dlc.library.columbia.edu/</a></td>
-        <td><span class="good">96</span></td>
+        <td>Front page</td>
+        <td><a href="https://dlc.library.columbia.edu/" target="_blank" class="url-link">https://dlc.library.columbia.edu/</a></td>
+        <td><span class="good">92</span></td>
         <td>2</td>
         <td>
           <button id="button-dlc-0" class="toggle-issues" onclick="toggleIssues('dlc-0')">Show Issues</button>
         </td>
       </tr>
       <tr class="issues-row">
-        <td colspan="4">
+        <td colspan="5">
           <div id="issues-dlc-0" class="issues-container">
     
             <div class="issue">
               <h4>Background and foreground colors do not have a sufficient contrast ratio.</h4>
-              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://web.dev/color-contrast/" target="_blank">Learn more</a>.</p>
+              <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast" target="_blank">Learn how to provide sufficient color contrast</a>.</p>
         
             </div>
         
             <div class="issue">
               <h4>Some elements have a &lt;code&gt;[tabindex]&lt;/code&gt; value greater than 0</h4>
-              <p>A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. <a href="https://web.dev/tabindex/" target="_blank">Learn more</a>.</p>
+              <p>A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. <a href="https://dequeuniversity.com/rules/axe/4.10/tabindex" target="_blank">Learn more about the &lt;code&gt;tabindex&lt;/code&gt; attribute</a>.</p>
         
             </div>
         
@@ -137,6 +139,6 @@
     </table>
   </div>
   
-  <footer>Generated on 8/1/2025, 2:06:47 PM</footer>
+  <footer>Generated on 8/5/2025, 11:46:02 AM</footer>
 </body>
 </html>

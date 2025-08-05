@@ -1,296 +1,1172 @@
 {
   "Libguides": [
-    "https://guides.library.columbia.edu/moderntibetanstudiesguide",
-    "https://guides.library.columbia.edu/HSEA-W4815",
-    "https://guides.library.columbia.edu/biological-sciences-guides",
-    "https://guides.library.columbia.edu/HIST-W3507",
-    "https://guides.library.columbia.edu/activeaudience",
-    "https://guides.library.columbia.edu/romanticism",
-    "https://guides.library.columbia.edu/africa-black-internationalism",
-    "https://guides.library.columbia.edu/AFCVUN1020_001",
-    "https://guides.library.columbia.edu/African_Diaspora_and_African_Literatures",
-    "https://guides.library.columbia.edu/afamst",
-    "https://guides.library.columbia.edu/AFAS",
-    "https://guides.library.columbia.edu/AMST-W3630",
-    "https://guides.library.columbia.edu/american",
-    "https://guides.library.columbia.edu/CLAS",
-    "https://guides.library.columbia.edu/ITAL-W4055-001",
-    "https://guides.library.columbia.edu/APAM",
-    "https://guides.library.columbia.edu/architectural_design",
-    "https://guides.library.columbia.edu/c.php?g=387118",
-    "https://guides.library.columbia.edu/AHIS",
-    "https://guides.library.columbia.edu/latinamerica_art",
-    "https://guides.library.columbia.edu/asianamericans",
-    "https://guides.library.columbia.edu/sasia-bangladesh",
-    "https://guides.library.columbia.edu/BarnardReligionLabResearch",
-    "https://guides.library.columbia.edu/basic_guide_to_research_on_africa",
-    "https://guides.library.columbia.edu/thebody",
-    "https://guides.library.columbia.edu/sasia-bhutan",
-    "https://guides.library.columbia.edu/biblicalstudies",
-    "https://guides.library.columbia.edu/c.php?g=1362237",
-    "https://guides.library.columbia.edu/POLS-W3921-001",
-    "https://guides.library.columbia.edu/bioethics",
-    "https://guides.library.columbia.edu/biology",
-    "https://guides.library.columbia.edu/Biomedical",
-    "https://guides.library.columbia.edu/BMEN",
-    "https://guides.library.columbia.edu/bloomberg",
-    "https://guides.library.columbia.edu/brithist",
-    "https://guides.library.columbia.edu/building_materials",
-    "https://guides.library.columbia.edu/researchguides",
-    "https://guides.library.columbia.edu/journalism-business",
-    "https://guides.library.columbia.edu/ms",
-    "https://guides.library.columbia.edu/usgd/campaigns",
-    "https://guides.library.columbia.edu/capitaliq",
-    "https://guides.library.columbia.edu/MBA",
-    "https://guides.library.columbia.edu/census",
-    "https://guides.library.columbia.edu/CHEN",
-    "https://guides.library.columbia.edu/chemistry",
-    "https://guides.library.columbia.edu/c.php?g=826896",
-    "https://guides.library.columbia.edu/c.php?g=826838",
-    "https://guides.library.columbia.edu/c.php?g=826847",
-    "https://guides.library.columbia.edu/c.php?g=827085",
-    "https://guides.library.columbia.edu/CIEN",
-    "https://guides.library.columbia.edu/Climate",
-    "https://guides.library.columbia.edu/CLME-W1520",
-    "https://guides.library.columbia.edu/CLYD-W3600",
-    "https://guides.library.columbia.edu/CLYD-W3500",
-    "https://guides.library.columbia.edu/uarchives",
-    "https://guides.library.columbia.edu/columbia_university_buildings",
-    "https://guides.library.columbia.edu/numeric",
-    "https://guides.library.columbia.edu/company",
-    "https://guides.library.columbia.edu/complit",
-    "https://guides.library.columbia.edu/PUAF-U6239",
-    "https://guides.library.columbia.edu/COMS",
-    "https://guides.library.columbia.edu/consumerdata",
-    "https://guides.library.columbia.edu/contemporary-African-politics",
-    "https://guides.library.columbia.edu/POLS-GU4496",
-    "https://guides.library.columbia.edu/COCI-C1101-041",
-    "https://guides.library.columbia.edu/COCI-C1101-036",
-    "https://guides.library.columbia.edu/COCI-C1102-048",
-    "https://guides.library.columbia.edu/COCI-C1102-041",
-    "https://guides.library.columbia.edu/journalism-copyright",
-    "https://guides.library.columbia.edu/courseguides",
-    "https://guides.library.columbia.edu/businessresearch",
-    "https://guides.library.columbia.edu/anthropology",
-    "https://guides.library.columbia.edu/CulturasHispanicas",
-    "https://guides.library.columbia.edu/EEEB-W3940",
-    "https://guides.library.columbia.edu/journalism-data",
-    "https://guides.library.columbia.edu/datatools",
-    "https://guides.library.columbia.edu/datacitation",
-    "https://guides.library.columbia.edu/databasesearching",
-    "https://guides.library.columbia.edu/Dinosaurs",
-    "https://guides.library.columbia.edu/disabilitystudies",
-    "https://guides.library.columbia.edu/c.php?g=384568",
-    "https://guides.library.columbia.edu/sasia-theses",
-    "https://guides.library.columbia.edu/journalism/documentaries",
-    "https://guides.library.columbia.edu/earth-environmental-sciences-guides",
-    "https://guides.library.columbia.edu/EAEE",
-    "https://guides.library.columbia.edu/Earth_Environmental",
-    "https://guides.library.columbia.edu/EESC",
-    "https://guides.library.columbia.edu/History-East-Africa-Swahili-Coast",
-    "https://guides.library.columbia.edu/eastasian",
-    "https://guides.library.columbia.edu/E3B",
-    "https://guides.library.columbia.edu/economic-development-in-Africa",
-    "https://guides.library.columbia.edu/EconIndicator",
-    "https://guides.library.columbia.edu/ECON",
-    "https://guides.library.columbia.edu/education-in-africa",
-    "https://guides.library.columbia.edu/ElectionData",
-    "https://guides.library.columbia.edu/ELEN",
-    "https://guides.library.columbia.edu/eloquentanimals",
-    "https://guides.library.columbia.edu/engineeringguides",
-    "https://guides.library.columbia.edu/english",
-    "https://guides.library.columbia.edu/entrepreneurship",
-    "https://guides.library.columbia.edu/ENVP-U6241",
-    "https://guides.library.columbia.edu/POLS-UN3922-002",
-    "https://guides.library.columbia.edu/fascism",
-    "https://guides.library.columbia.edu/shutdown",
-    "https://guides.library.columbia.edu/FILM",
-    "https://guides.library.columbia.edu/latinamerica_film",
-    "https://guides.library.columbia.edu/c.php?g=1310346",
-    "https://guides.library.columbia.edu/findingsources",
-    "https://guides.library.columbia.edu/FoodSustainability",
-    "https://guides.library.columbia.edu/gov/translations",
-    "https://guides.library.columbia.edu/FoundationsOfInnovation",
-    "https://guides.library.columbia.edu/SCNCUN1212_001",
-    "https://guides.library.columbia.edu/frank-lloyd-wright",
-    "https://guides.library.columbia.edu/c.php?g=1033609",
-    "https://guides.library.columbia.edu/french-empires",
-    "https://guides.library.columbia.edu/FREN",
-    "https://guides.library.columbia.edu/french",
-    "https://guides.library.columbia.edu/FREN-G8091",
-    "https://guides.library.columbia.edu/SCNCCC1000-001",
-    "https://guides.library.columbia.edu/fula-language",
-    "https://guides.library.columbia.edu/gender-sexuality-African-history",
-    "https://guides.library.columbia.edu/HSWM-W2761",
-    "https://guides.library.columbia.edu/womendev",
-    "https://guides.library.columbia.edu/germanstudies",
-    "https://guides.library.columbia.edu/GIS",
-    "https://guides.library.columbia.edu/geotools",
-    "https://guides.library.columbia.edu/graphic-novels",
-    "https://guides.library.columbia.edu/historytheses",
-    "https://guides.library.columbia.edu/hacking4humanity",
-    "https://guides.library.columbia.edu/HIST-GU4962",
-    "https://guides.library.columbia.edu/hausa-language",
-    "https://guides.library.columbia.edu/health-medicine-Africa",
-    "https://guides.library.columbia.edu/HealthData",
-    "https://guides.library.columbia.edu/hispanic_nyc",
-    "https://guides.library.columbia.edu/HIST-W3603",
-    "https://guides.library.columbia.edu/HIST-W3304",
-    "https://guides.library.columbia.edu/HIST-3604",
-    "https://guides.library.columbia.edu/HIST-G8300",
-    "https://guides.library.columbia.edu/HIST-W4641",
-    "https://guides.library.columbia.edu/historic_preservation",
-    "https://guides.library.columbia.edu/Hist_Corp_Rept",
-    "https://guides.library.columbia.edu/history",
-    "https://guides.library.columbia.edu/HIST-G8132",
-    "https://guides.library.columbia.edu/c.php?g=948732",
-    "https://guides.library.columbia.edu/humanrights_studies",
-    "https://guides.library.columbia.edu/SOCW-T6801",
-    "https://guides.library.columbia.edu/sasia-india",
-    "https://guides.library.columbia.edu/sasia-music",
-    "https://guides.library.columbia.edu/sasia-history-rebellion",
-    "https://guides.library.columbia.edu/IEOR",
-    "https://guides.library.columbia.edu/industry",
-    "https://guides.library.columbia.edu/insurance",
-    "https://guides.library.columbia.edu/INAF",
-    "https://guides.library.columbia.edu/conflict",
-    "https://guides.library.columbia.edu/internationaldata",
-    "https://guides.library.columbia.edu/AzaranskyCivilRights",
-    "https://guides.library.columbia.edu/jour/investigate",
-    "https://guides.library.columbia.edu/islamic_studies",
-    "https://guides.library.columbia.edu/ITAL",
-    "https://guides.library.columbia.edu/italian",
-    "https://guides.library.columbia.edu/ITAL-W4043-001",
-    "https://guides.library.columbia.edu/journalism/shoeleather",
-    "https://guides.library.columbia.edu/EAAS-W3405-001",
-    "https://guides.library.columbia.edu/HSEA-G9875-001",
-    "https://guides.library.columbia.edu/JPNS-G9060-001",
-    "https://guides.library.columbia.edu/japanese-studies-guide",
-    "https://guides.library.columbia.edu/sasia-journalism",
-    "https://guides.library.columbia.edu/journalism",
-    "https://guides.library.columbia.edu/JWST-W4538",
-    "https://guides.library.columbia.edu/korean-studies",
-    "https://guides.library.columbia.edu/lcaaj",
-    "https://guides.library.columbia.edu/latinamerica_microform",
-    "https://guides.library.columbia.edu/SPAN",
-    "https://guides.library.columbia.edu/latinamerica",
-    "https://guides.library.columbia.edu/JapanesePedagogySummerSession",
-    "https://guides.library.columbia.edu/jour",
-    "https://guides.library.columbia.edu/linguistics",
-    "https://guides.library.columbia.edu/lodging",
-    "https://guides.library.columbia.edu/hili",
-    "https://guides.library.columbia.edu/HIST-G9762-001",
-    "https://guides.library.columbia.edu/maps-and-power",
-    "https://guides.library.columbia.edu/marketingres",
-    "https://guides.library.columbia.edu/Marketing_And_Advertising",
-    "https://guides.library.columbia.edu/HIST-W3334",
-    "https://guides.library.columbia.edu/pols-w3218",
-    "https://guides.library.columbia.edu/math",
-    "https://guides.library.columbia.edu/MECE",
-    "https://guides.library.columbia.edu/mentalhealthpolicy",
-    "https://guides.library.columbia.edu/INAF-U6827",
-    "https://guides.library.columbia.edu/BarnardReligionLabArchives",
-    "https://guides.library.columbia.edu/mideast",
-    "https://guides.library.columbia.edu/latinamerica_music",
-    "https://guides.library.columbia.edu/MUSI",
-    "https://guides.library.columbia.edu/sasia-nepal",
-    "https://guides.library.columbia.edu/nyc-atlases",
-    "https://guides.library.columbia.edu/nyc-buildings",
-    "https://guides.library.columbia.edu/nycdata",
-    "https://guides.library.columbia.edu/gov/nyc",
-    "https://guides.library.columbia.edu/gov/nys",
-    "https://guides.library.columbia.edu/latinamerica_news",
-    "https://guides.library.columbia.edu/news-sources",
-    "https://guides.library.columbia.edu/news",
-    "https://guides.library.columbia.edu/nonprofit",
-    "https://guides.library.columbia.edu/ENGL-W3398",
-    "https://guides.library.columbia.edu/jour/off-the-news",
-    "https://guides.library.columbia.edu/OER",
-    "https://guides.library.columbia.edu/opinionpolldata",
-    "https://guides.library.columbia.edu/oral_history",
-    "https://guides.library.columbia.edu/sasia-pakistan",
-    "https://guides.library.columbia.edu/patents-techreports-standards",
-    "https://guides.library.columbia.edu/INAF-6549",
-    "https://guides.library.columbia.edu/phd",
-    "https://guides.library.columbia.edu/PHIL",
-    "https://guides.library.columbia.edu/physical-anthropology",
-    "https://guides.library.columbia.edu/physics-astronomy",
-    "https://guides.library.columbia.edu/polisci",
-    "https://guides.library.columbia.edu/polls",
-    "https://guides.library.columbia.edu/migration",
-    "https://guides.library.columbia.edu/Psychology",
-    "https://guides.library.columbia.edu/gov/igo",
-    "https://guides.library.columbia.edu/pulitzer",
-    "https://guides.library.columbia.edu/c.php?g=962826",
-    "https://guides.library.columbia.edu/race_built_environment",
-    "https://guides.library.columbia.edu/HIST-W4588",
-    "https://guides.library.columbia.edu/real_estate_development",
-    "https://guides.library.columbia.edu/realestate",
-    "https://guides.library.columbia.edu/student_org_records",
-    "https://guides.library.columbia.edu/RELI-W3318",
-    "https://guides.library.columbia.edu/RELI",
-    "https://guides.library.columbia.edu/religious-studies",
-    "https://guides.library.columbia.edu/ReligiousWorlds",
-    "https://guides.library.columbia.edu/reporting",
-    "https://guides.library.columbia.edu/research-data",
-    "https://guides.library.columbia.edu/jewishstudies",
-    "https://guides.library.columbia.edu/BiblicalLanguages",
-    "https://guides.library.columbia.edu/facultyresources",
-    "https://guides.library.columbia.edu/SPS",
-    "https://guides.library.columbia.edu/SOCW-T7143",
-    "https://guides.library.columbia.edu/smallbusinessreapstartup",
-    "https://guides.library.columbia.edu/sw/swagency",
-    "https://guides.library.columbia.edu/HSPB-W2950-001",
-    "https://guides.library.columbia.edu/REGN-U6410-001",
-    "https://guides.library.columbia.edu/SOCW",
-    "https://guides.library.columbia.edu/sociology",
-    "https://guides.library.columbia.edu/SAsiaCrossRegional",
-    "https://guides.library.columbia.edu/sasia-epics",
-    "https://guides.library.columbia.edu/seasia",
-    "https://guides.library.columbia.edu/sportsmanagement",
-    "https://guides.library.columbia.edu/sasia-srilanka",
-    "https://guides.library.columbia.edu/StrategicCommunication",
-    "https://guides.library.columbia.edu/streamingvideo",
-    "https://guides.library.columbia.edu/sustainability-policy",
-    "https://guides.library.columbia.edu/development-practice",
-    "https://guides.library.columbia.edu/swahilibib",
-    "https://guides.library.columbia.edu/text-mining",
-    "https://guides.library.columbia.edu/AMSTUN3630",
-    "https://guides.library.columbia.edu/theatlantic",
-    "https://guides.library.columbia.edu/gov/budget",
-    "https://guides.library.columbia.edu/gov/eu",
-    "https://guides.library.columbia.edu/horn-of-africa",
-    "https://guides.library.columbia.edu/gov/legislative",
-    "https://guides.library.columbia.edu/sasia-maldives",
-    "https://guides.library.columbia.edu/nytimes",
-    "https://guides.library.columbia.edu/novel-in-Africa",
-    "https://guides.library.columbia.edu/MDES-GU4122-001",
-    "https://guides.library.columbia.edu/gov/regulatory",
-    "https://guides.library.columbia.edu/wsj",
-    "https://guides.library.columbia.edu/THEA",
-    "https://guides.library.columbia.edu/theologicalseminarystudies",
-    "https://guides.library.columbia.edu/ASCE-V1365-001",
-    "https://guides.library.columbia.edu/TIBT-W2413-001",
-    "https://guides.library.columbia.edu/EARL-W4312-001",
-    "https://guides.library.columbia.edu/c.php?g=1450948",
-    "https://guides.library.columbia.edu/census-data",
-    "https://guides.library.columbia.edu/gov/foreignpolicy",
-    "https://guides.library.columbia.edu/gov/un",
-    "https://guides.library.columbia.edu/ENGL-C1010",
-    "https://guides.library.columbia.edu/ENGL-F1010",
-    "https://guides.library.columbia.edu/ENGL-S1010",
-    "https://guides.library.columbia.edu/urban-africa",
-    "https://guides.library.columbia.edu/urban_planning",
-    "https://guides.library.columbia.edu/WKWendowment",
-    "https://guides.library.columbia.edu/cwii-africa",
-    "https://guides.library.columbia.edu/water",
-    "https://guides.library.columbia.edu/wm",
-    "https://guides.library.columbia.edu/history-of-west-africa",
-    "https://guides.library.columbia.edu/wolof-language",
-    "https://guides.library.columbia.edu/AzaranskyWomenBlackFreedomMovement",
-    "https://guides.library.columbia.edu/women-gender-sexuality",
-    "https://guides.library.columbia.edu/WRDS",
-    "https://guides.library.columbia.edu/CLFR-W3617-001",
-    "https://guides.library.columbia.edu/zulu-language"
+    {
+      "url": "https://guides.library.columbia.edu/moderntibetanstudiesguide",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HSEA-W4815",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/biological-sciences-guides",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-W3507",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/activeaudience",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/romanticism",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/africa-black-internationalism",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/AFCVUN1020_001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/African_Diaspora_and_African_Literatures",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/afamst",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/AFAS",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/AMST-W3630",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/american",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/CLAS",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ITAL-W4055-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/APAM",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/architectural_design",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=387118",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/AHIS",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/latinamerica_art",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/asianamericans",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-bangladesh",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/BarnardReligionLabResearch",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/basic_guide_to_research_on_africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/thebody",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-bhutan",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/biblicalstudies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=1362237",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/POLS-W3921-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/bioethics",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/biology",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/Biomedical",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/BMEN",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/bloomberg",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/brithist",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/building_materials",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/researchguides",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/journalism-business",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ms",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/usgd/campaigns",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/capitaliq",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/MBA",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/census",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/CHEN",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/chemistry",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=826896",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=826838",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=826847",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=827085",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/CIEN",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/Climate",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/CLME-W1520",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/CLYD-W3600",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/CLYD-W3500",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/uarchives",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/columbia_university_buildings",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/numeric",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/company",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/complit",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/PUAF-U6239",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/COMS",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/consumerdata",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/contemporary-African-politics",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/POLS-GU4496",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/COCI-C1101-041",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/COCI-C1101-036",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/COCI-C1102-048",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/COCI-C1102-041",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/journalism-copyright",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/courseguides",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/businessresearch",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/anthropology",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/CulturasHispanicas",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/EEEB-W3940",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/journalism-data",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/datatools",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/datacitation",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/databasesearching",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/Dinosaurs",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/disabilitystudies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=384568",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-theses",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/journalism/documentaries",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/earth-environmental-sciences-guides",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/EAEE",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/Earth_Environmental",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/EESC",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/History-East-Africa-Swahili-Coast",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/eastasian",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/E3B",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/economic-development-in-Africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/EconIndicator",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ECON",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/education-in-africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ElectionData",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ELEN",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/eloquentanimals",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/engineeringguides",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/english",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/entrepreneurship",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ENVP-U6241",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/POLS-UN3922-002",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/fascism",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/shutdown",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/FILM",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/latinamerica_film",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=1310346",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/findingsources",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/FoodSustainability",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/translations",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/FoundationsOfInnovation",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/SCNCUN1212_001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/frank-lloyd-wright",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=1033609",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/french-empires",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/FREN",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/french",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/FREN-G8091",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/SCNCCC1000-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/fula-language",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gender-sexuality-African-history",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HSWM-W2761",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/womendev",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/germanstudies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/GIS",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/geotools",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/graphic-novels",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/historytheses",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/hacking4humanity",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-GU4962",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/hausa-language",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/health-medicine-Africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HealthData",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/hispanic_nyc",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-W3603",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-W3304",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-3604",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-G8300",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-W4641",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/historic_preservation",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/Hist_Corp_Rept",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/history",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-G8132",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=948732",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/humanrights_studies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/SOCW-T6801",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-india",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-music",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-history-rebellion",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/IEOR",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/industry",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/insurance",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/INAF",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/conflict",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/internationaldata",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/AzaranskyCivilRights",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/jour/investigate",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/islamic_studies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ITAL",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/italian",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ITAL-W4043-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/journalism/shoeleather",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/EAAS-W3405-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HSEA-G9875-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/JPNS-G9060-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/japanese-studies-guide",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-journalism",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/journalism",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/JWST-W4538",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/korean-studies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/lcaaj",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/latinamerica_microform",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/SPAN",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/latinamerica",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/JapanesePedagogySummerSession",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/jour",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/linguistics",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/lodging",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/hili",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-G9762-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/maps-and-power",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/marketingres",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/Marketing_And_Advertising",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-W3334",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/pols-w3218",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/math",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/MECE",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/mentalhealthpolicy",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/INAF-U6827",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/BarnardReligionLabArchives",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/mideast",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/latinamerica_music",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/MUSI",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-nepal",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/nyc-atlases",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/nyc-buildings",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/nycdata",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/nyc",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/nys",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/latinamerica_news",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/news-sources",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/news",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/nonprofit",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ENGL-W3398",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/jour/off-the-news",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/OER",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/opinionpolldata",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/oral_history",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-pakistan",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/patents-techreports-standards",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/INAF-6549",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/phd",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/PHIL",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/physical-anthropology",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/physics-astronomy",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/polisci",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/polls",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/migration",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/Psychology",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/igo",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/pulitzer",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=962826",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/race_built_environment",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HIST-W4588",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/real_estate_development",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/realestate",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/student_org_records",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/RELI-W3318",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/RELI",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/religious-studies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ReligiousWorlds",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/reporting",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/research-data",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/jewishstudies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/BiblicalLanguages",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/facultyresources",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/SPS",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/SOCW-T7143",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/smallbusinessreapstartup",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sw/swagency",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/HSPB-W2950-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/REGN-U6410-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/SOCW",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sociology",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/SAsiaCrossRegional",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-epics",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/seasia",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sportsmanagement",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-srilanka",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/StrategicCommunication",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/streamingvideo",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sustainability-policy",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/development-practice",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/swahilibib",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/text-mining",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/AMSTUN3630",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/theatlantic",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/budget",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/eu",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/horn-of-africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/legislative",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/sasia-maldives",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/nytimes",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/novel-in-Africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/MDES-GU4122-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/regulatory",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/wsj",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/THEA",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/theologicalseminarystudies",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ASCE-V1365-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/TIBT-W2413-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/EARL-W4312-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/c.php?g=1450948",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/census-data",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/foreignpolicy",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/gov/un",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ENGL-C1010",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ENGL-F1010",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/ENGL-S1010",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/urban-africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/urban_planning",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/WKWendowment",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/cwii-africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/water",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/wm",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/history-of-west-africa",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/wolof-language",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/AzaranskyWomenBlackFreedomMovement",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/women-gender-sexuality",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/WRDS",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/CLFR-W3617-001",
+      "title": "Front page"
+    },
+    {
+      "url": "https://guides.library.columbia.edu/zulu-language",
+      "title": "Front page"
+    }
   ]
 }
