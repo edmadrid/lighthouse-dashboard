@@ -122,6 +122,7 @@ let summaryHTML = `
 <head>
   <title>CUL Accessibility Dashboard - ${baseName}</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   <script>${javaScript}</script>
 </head>
 <body>
@@ -279,7 +280,7 @@ sortedCategories.forEach(category => {
       <tr>
         <th>Page</th>
         <th>URL</th>
-        <th>Accessibility Score</th>
+        <th>Score</th>
         <th>Issues</th>
         <th>Actions</th>
       </tr>

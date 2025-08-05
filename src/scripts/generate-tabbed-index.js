@@ -153,6 +153,7 @@ function generateTabbedIndex() {
   <meta name="robots" content="noindex">
   <title>CUL Accessibility Dashboard</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   <script>
     ${dashboardScript}
     
@@ -206,7 +207,7 @@ function generateTabbedIndex() {
     </ul>
 
     <div class="welcome-message">
-      <p>Select a tab above to view accessibility test results</p>
+      <p>☝️ Select a site to view accessibility test results</p>
     </div>
     
     ${tabs.map(tab => `
