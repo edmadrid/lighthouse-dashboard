@@ -277,6 +277,7 @@ sortedCategories.forEach(category => {
     
     <table id="table-${categoryId}" class="url-table">
       <tr>
+        <th>Page</th>
         <th>URL</th>
         <th>Accessibility Score</th>
         <th>Issues</th>
@@ -297,11 +298,12 @@ sortedCategories.forEach(category => {
     const urlTitle = urlTitles[report.url] || urlTitles[normalizedReportUrl] || urlTitles[report.url + '/'] || urlTitles[normalizedReportUrl + '/'];
     
     const displayContent = urlTitle ? 
-      `${urlTitle}: <a href="${report.url}" target="_blank" class="url-link">${report.url}</a>` : 
+      `<a href="${report.url}" target="_blank" class="url-link">${report.url}</a>` : 
       `<a href="${report.url}" target="_blank" class="url-link">${report.url}</a>`;
     
     summaryHTML += `
       <tr data-url="${report.url}">
+        <td>${urlTitle}</td>
         <td>${displayContent}</td>
         <td><span class="${scoreClass}">${report.score}</span></td>
         <td>${report.issues.length}</td>
@@ -310,7 +312,7 @@ sortedCategories.forEach(category => {
         </td>
       </tr>
       <tr class="issues-row">
-        <td colspan="4">
+        <td colspan="5">
           <div id="issues-${urlId}" class="issues-container">
     `;
     
