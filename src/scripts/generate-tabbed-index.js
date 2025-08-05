@@ -204,6 +204,10 @@ function generateTabbedIndex() {
     <ul class="tab-nav">
       ${tabs.map(tab => `<li><button id="btn-${tab.id}" onclick="switchTab('${tab.id}')">${tab.title}</button></li>`).join('')}
     </ul>
+
+    <div class="welcome-message">
+      <p>Select a tab above to view accessibility test results</p>
+    </div>
     
     ${tabs.map(tab => `
     <div id="tab-${tab.id}" class="tab-content">

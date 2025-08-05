@@ -331,12 +331,16 @@ code {
   display: block;
 }
 
-/* .welcome-message {
-  text-align: center;
-  padding: 40px 20px;
+/* welcome message */
+
+.welcome-message {
+  background-color: var(--color-bg-light);
   color: var(--color-text-secondary);
   font-size: 18px;
-} */
+  height: 24vw;
+  padding: 5em 2em;
+  text-align: center;
+}
 
 /* footer */
 
