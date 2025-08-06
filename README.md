@@ -52,8 +52,8 @@ Each test will:
 
 - `/src/inputs/` - JSON files which list pages to test for each site
 - `/src/scripts/` - Build and processing scripts  
-- `/dist/` - Generated HTML dashboards and CSS
-- `/dist/styles.css` - Shared stylesheet for all dashboards
+- `/src/assets/` - Static assets (CSS, images) that get copied to `/dist/`
+- `/dist/` - Generated HTML dashboards and copied assets
 
 ## Additional Scripts
 

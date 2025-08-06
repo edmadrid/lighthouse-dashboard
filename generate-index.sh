@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # Generate tabbed index.html from existing dashboard files
+echo "Copying static assets..."
+cp src/assets/* dist/
+
 echo "Generating tabbed index.html..."
 node src/scripts/generate-tabbed-index.js
 

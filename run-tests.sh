@@ -124,6 +124,9 @@ done
 # Generate tabbed index with all dashboards
 if [ "$SUCCESS_COUNT" -gt 0 ]; then
     echo ""
+    echo "Copying static assets..."
+    cp src/assets/* dist/
+    
     echo "Generating tabbed index dashboard..."
     ./generate-index.sh
     
