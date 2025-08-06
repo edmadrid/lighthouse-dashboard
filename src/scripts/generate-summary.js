@@ -347,35 +347,6 @@ sortedCategories.forEach(category => {
               <p>${safeDescription}</p>
         `;
         
-        if (issue.details && issue.details.items && issue.details.items.length > 0) {
-          let hasExamples = false;
-          let examplesHTML = '';
-          
-          // Show up to 3 examples
-          issue.details.items.slice(0, 3).forEach(item => {
-            let itemDetails = '';
-            for (const key in item) {
-              if (item[key] && typeof item[key] === 'string') {
-                const safeValue = sanitizeHTML(item[key]);
-                itemDetails += `${key}: ${safeValue}, `;
-              }
-            }
-            if (itemDetails) {
-              examplesHTML += `<li>${itemDetails.slice(0, -2)}</li>`;
-              hasExamples = true;
-            }
-          });
-          
-          if (issue.details.items.length > 3) {
-            examplesHTML += `<li>... and ${issue.details.items.length - 3} more</li>`;
-            hasExamples = true;
-          }
-          
-          // Only add the Examples section if we have actual examples to show
-          if (hasExamples) {
-            summaryHTML += `<p><strong>Examples:</strong></p><ul>${examplesHTML}</ul>`;
-          }
-        }
         
         summaryHTML += `
             </div>
