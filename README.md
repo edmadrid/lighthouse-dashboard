@@ -20,35 +20,33 @@ chmod +x src/scripts/run-audit.sh
 
 ## Usage
 
-`./run-tests.sh [file1.json file2.json ...]` provides flexible testing of JSON files:
+To test sites:
+
+`./run-tests.sh [file1.json file2.json ...]`
+
+Examples:
 
 ```bash
 # Test all JSON files in src/inputs/
 ./run-tests.sh
 
-# Test specific files
+# Test specific sites
 ./run-tests.sh ac.json dante.json
 
-# Test specific files (without .json extension)
+# Test specific sites (without .json extension)
 ./run-tests.sh ac dante
 
-# List available files
+# List available sites
 ./run-tests.sh --list
 
 # Show help
 ./run-tests.sh --help
 ```
 
-**Examples:**
-- `./run-tests.sh ac.json` - Test only the AC site
-- `./run-tests.sh` - Test all sites in src/inputs/
-- `./run-tests.sh ac dante dlc` - Test specific sites
-
-Each run will:
+Each test will:
 - Test all pages in the specified JSON file(s)
 - Generate individual dashboards (e.g., `dist/ac.html`)
 - Update the tabbed index at `dist/index.html`
-- Provide a summary of successes/failures
 
 ## Project Structure
 
