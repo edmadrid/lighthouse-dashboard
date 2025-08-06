@@ -78,24 +78,25 @@ TOTAL_COUNT=0
 
 # Run lighthouse on each URL
 for url in $URLS; do
-    echo "Testing: $url"
+    echo "🔍 Testing ($((TOTAL_COUNT + 1)) of $(echo $URLS | wc -w | tr -d ' ')): $url"
     TOTAL_COUNT=$((TOTAL_COUNT + 1))
     
     # Create a safe filename from URL
     FILENAME=$(echo "$url" | sed 's|https\?://||g' | sed 's|[^a-zA-Z0-9.-]|_|g')
     
-    # Run lighthouse with accessibility focus and desktop preset
+    echo "   📊 Running Lighthouse accessibility audit..."
+    # Run lighthouse with accessibility focus and desktop preset in headless mode
     if lighthouse "$url" \
         --only-categories=accessibility \
         --preset=desktop \
         --output=json \
         --output=html \
         --output-path="$REPORT_DIR/${FILENAME}" \
-        --quiet; then
-        echo "✅ Completed: $url"
+        --chrome-flags="--headless"; then
+        echo "   ✅ Completed: $url"
         SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
     else
-        echo "❌ Failed: $url"
+        echo "   ❌ Failed: $url"
     fi
     echo ""
 done

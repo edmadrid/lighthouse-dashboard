@@ -73,7 +73,7 @@
 <body>
   <div class="tab-header">
     <h1><a href="/">CUL Accessibility Dashboard</a>: <strong>AC</strong></h1>
-    <span class="tab-meta">Generated on 8/6/2025, 11:00:51 AM</span>
+    <span class="tab-meta">Generated on 8/6/2025, 11:50:54 AM</span>
   </div>
 
   <div class="stats">
@@ -92,13 +92,14 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Total Issues</div>
-        <div class="stat-value">0</div>
+        <div class="stat-value">1</div>
       </div>
     </div>
   </div>
 
   <div id="category-ac" class="category-section">
     
+    <div class="table-container">
     <table id="table-ac" class="url-table">
       <tr>
         <th>Page</th>
@@ -108,9 +109,9 @@
         <th>Actions</th>
       </tr>
   
-      <tr data-url="https://academiccommons.columbia.edu/">
-        <td>Front page</td>
-        <td><a href="https://academiccommons.columbia.edu/" target="_blank" class="url-link">https://academiccommons.columbia.edu/</a></td>
+      <tr data-url="https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH">
+        <td>Item page</td>
+        <td><a href="https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH" target="_blank" class="url-link">https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH</a></td>
         <td><span class="good">100</span></td>
         <td>0</td>
         <td>
@@ -125,9 +126,9 @@
         </td>
       </tr>
     
-      <tr data-url="https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH">
-        <td>Item page</td>
-        <td><a href="https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH" target="_blank" class="url-link">https://academiccommons.columbia.edu/doi/10.7916/D83X8GQH</a></td>
+      <tr data-url="https://academiccommons.columbia.edu/explore">
+        <td>Text page</td>
+        <td><a href="https://academiccommons.columbia.edu/explore" target="_blank" class="url-link">https://academiccommons.columbia.edu/explore</a></td>
         <td><span class="good">100</span></td>
         <td>0</td>
         <td>
@@ -142,11 +143,11 @@
         </td>
       </tr>
     
-      <tr data-url="https://academiccommons.columbia.edu/explore">
-        <td>Text page</td>
-        <td><a href="https://academiccommons.columbia.edu/explore" target="_blank" class="url-link">https://academiccommons.columbia.edu/explore</a></td>
+      <tr data-url="https://academiccommons.columbia.edu/search?search_field=all_fields&q=">
+        <td>Search results</td>
+        <td><a href="https://academiccommons.columbia.edu/search?search_field=all_fields&q=" target="_blank" class="url-link">https://academiccommons.columbia.edu/search?search_field=all_fields&q=</a></td>
         <td><span class="good">100</span></td>
-        <td>0</td>
+        <td>1</td>
         <td>
           <button id="button-ac-2" class="toggle-issues" onclick="toggleIssues('ac-2')">Show Issues</button>
         </td>
@@ -154,14 +155,20 @@
       <tr class="issues-row">
         <td colspan="5">
           <div id="issues-ac-2" class="issues-container">
-    <p>No accessibility issues found!</p>
+    
+            <div class="issue">
+              <h4>Elements with visible text labels do not have matching accessible names.</h4>
+              <p>Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch" target="_blank">Learn more about accessible names</a>.</p>
+        
+            </div>
+        
           </div>
         </td>
       </tr>
     
-      <tr data-url="https://academiccommons.columbia.edu/search?search_field=all_fields&q=">
-        <td>Search results</td>
-        <td><a href="https://academiccommons.columbia.edu/search?search_field=all_fields&q=" target="_blank" class="url-link">https://academiccommons.columbia.edu/search?search_field=all_fields&q=</a></td>
+      <tr data-url="https://academiccommons.columbia.edu/">
+        <td>Front page</td>
+        <td><a href="https://academiccommons.columbia.edu/" target="_blank" class="url-link">https://academiccommons.columbia.edu/</a></td>
         <td><span class="good">100</span></td>
         <td>0</td>
         <td>
@@ -177,8 +184,9 @@
       </tr>
     
     </table>
+    </div>
   </div>
   
-  <footer>Generated on 8/6/2025, 11:00:51 AM</footer>
+  <footer>Generated on 8/6/2025, 11:50:54 AM</footer>
 </body>
 </html>
