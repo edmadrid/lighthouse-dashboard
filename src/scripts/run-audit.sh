@@ -8,14 +8,14 @@ if [ -z "$INPUT_FILE" ]; then
     exit 1
 fi
 
-echo "Starting Lighthouse Accessibility Audit for $INPUT_FILE..."
+echo "Starting Lighthouse CLI Accessibility Audit for $INPUT_FILE..."
 
-# Run the lighthouse-batch with the input file
-BASE_NAME=$(./lighthouse-batch-script.sh "$INPUT_FILE")
+# Run the lighthouse CLI script with the input file
+BASE_NAME=$(./lighthouse-cli-script.sh "$INPUT_FILE")
 
-# Check if the batch script was successful
+# Check if the lighthouse script was successful
 if [ $? -ne 0 ]; then
-    echo "Error: Lighthouse batch script failed."
+    echo "Error: Lighthouse CLI script failed."
     exit 1
 fi
 
@@ -29,4 +29,4 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Audit complete! Open dist/${BASE_NAME}.html in your browser to view the results."
+echo "Lighthouse CLI audit complete! Open dist/${BASE_NAME}.html in your browser to view the results."

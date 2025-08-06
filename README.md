@@ -14,7 +14,7 @@
 chmod +x run-tests.sh
 chmod +x cleanup-reports.sh
 chmod +x generate-index.sh
-chmod +x src/scripts/lighthouse-batch-script.sh 
+chmod +x src/scripts/lighthouse-cli-script.sh 
 chmod +x src/scripts/run-audit.sh
 ```
 

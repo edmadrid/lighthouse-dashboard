@@ -91,7 +91,7 @@ for url in $URLS; do
         --preset=desktop \
         --output=json \
         --output=html \
-        --output-path="$REPORT_DIR/${FILENAME}" \
+        --output-path="$REPORT_DIR/${FILENAME}.report" \
         --chrome-flags="--headless"; then
         echo "   ✅ Completed: $url"
         SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
