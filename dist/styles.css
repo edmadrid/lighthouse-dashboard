@@ -345,6 +345,43 @@ code {
   text-align: center;
 }
 
+/* responsive tables */
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+  }
+  
+  table {
+    min-width: 600px;
+    margin-bottom: 0;
+  }
+  
+  th, td {
+    padding: 8px;
+    white-space: nowrap;
+  }
+  
+  .url-link {
+    max-width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .tab-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* footer */
 
 footer {
