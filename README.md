@@ -55,7 +55,21 @@ Each test will:
 - `/src/assets/` - Static assets (CSS, images) that get copied to `/dist/`
 - `/dist/` - Generated HTML dashboards and copied assets
 
+## Local Development
+
+For live development with CSS changes:
+
+```bash
+npm install        # Install browser-sync locally (optional)
+npm run serve      # Start development server with live reload
+```
+
+The development server will:
+- Serve files from `/dist/` 
+- Auto-reload when you edit CSS in `/src/assets/styles.css`
+- Watch for changes to HTML and JS files in `/dist/`
+
 ## Additional Scripts
 
 - `./cleanup-reports.sh` - Remove old lighthouse report files to save disk space
-- `./generate-index.sh` - Manually regenerate the tabbed index from existing dashboards
+- `./generate-index.sh` - Manually regenerate the tabbed index and copy assets from existing dashboards
