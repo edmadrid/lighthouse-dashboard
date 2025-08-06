@@ -14,10 +14,10 @@ BASE_NAME=$(basename "$INPUT_FILE" .json)
 # Create a directory for the reports if it doesn't exist
 mkdir -p ../../dist/lighthouse-reports
 
-# Check if lighthouse-batch is installed
-if ! command -v lighthouse-batch &> /dev/null; then
-    echo "Error: lighthouse-batch command not found."
-    echo "Please install it using: npm install -g lighthouse-batch"
+# Check if lighthouse CLI is installed
+if ! command -v lighthouse &> /dev/null; then
+    echo "Error: lighthouse command not found."
+    echo "Please install it using: npm install -g lighthouse"
     exit 1
 fi
 
@@ -27,9 +27,9 @@ if [ ! -f "../inputs/$INPUT_FILE" ]; then
     exit 1
 fi
 
-# Generate a temporary URLs file from the JSON
+# Extract URLs from JSON and run lighthouse on each
 echo "Extracting URLs from $INPUT_FILE..."
-node -e "
+URLS=$(node -e "
 const fs = require('fs');
 const path = require('path');
 const jsonPath = path.join(__dirname, '../inputs/$INPUT_FILE');
@@ -52,51 +52,64 @@ try {
         }
     }
     
-    // Write to temp file
-    const tempPath = path.join(__dirname, '../inputs/temp-urls.txt');
-    fs.writeFileSync(tempPath, allUrls.join('\n'));
-    console.log(\`Extracted \${allUrls.length} URLs to temporary file\`);
+    console.log(allUrls.join(' '));
 } catch (error) {
     console.error('Error processing $INPUT_FILE:', error);
     process.exit(1);
 }
-"
+")
 
-# Check if the temporary file was created successfully
-if [ ! -f "../inputs/temp-urls.txt" ]; then
-    echo "Error: Failed to create temporary URLs file from $INPUT_FILE"
+# Check if URLs were extracted successfully
+if [ -z "$URLS" ]; then
+    echo "Error: No URLs found in $INPUT_FILE"
     exit 1
 fi
-
-# Print the extracted URLs for debugging
-echo "URLs to test:"
-cat ../inputs/temp-urls.txt
 
 # Create a reports subfolder for this specific run
 REPORT_DIR="../../dist/lighthouse-reports/$BASE_NAME-reports"
 mkdir -p "$REPORT_DIR"
 
-# Run lighthouse-batch with verbose output
-echo "Running lighthouse-batch..."
-lighthouse-batch -g -f ../inputs/temp-urls.txt -o "$REPORT_DIR" --html --params "--only-categories=accessibility --preset=desktop" --verbose
+echo "URLs to test: $URLS"
+echo "Running lighthouse on each URL..."
 
-# Check if the command succeeded
-if [ $? -ne 0 ]; then
-    echo "Error: lighthouse-batch command failed."
-    exit 1
-fi
+# Counter for success/failure tracking
+SUCCESS_COUNT=0
+TOTAL_COUNT=0
+
+# Run lighthouse on each URL
+for url in $URLS; do
+    echo "Testing: $url"
+    TOTAL_COUNT=$((TOTAL_COUNT + 1))
+    
+    # Create a safe filename from URL
+    FILENAME=$(echo "$url" | sed 's|https\?://||g' | sed 's|[^a-zA-Z0-9.-]|_|g')
+    
+    # Run lighthouse with accessibility focus and desktop preset
+    if lighthouse "$url" \
+        --only-categories=accessibility \
+        --preset=desktop \
+        --output=json \
+        --output=html \
+        --output-path="$REPORT_DIR/${FILENAME}" \
+        --quiet; then
+        echo "✅ Completed: $url"
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+    else
+        echo "❌ Failed: $url"
+    fi
+    echo ""
+done
+
+echo "Lighthouse batch completed: $SUCCESS_COUNT/$TOTAL_COUNT URLs processed successfully"
 
 # Check if reports were created
 if [ ! "$(ls -A "$REPORT_DIR" 2>/dev/null)" ]; then
     echo "Warning: No reports were generated in $REPORT_DIR directory."
+    exit 1
 else
     echo "Reports generated successfully in $REPORT_DIR directory:"
     ls -la "$REPORT_DIR"
 fi
-
-# Clean up temporary file
-rm -f ../inputs/temp-urls.txt
-echo "Temporary URL list removed."
 
 echo "Lighthouse accessibility audits completed. Reports saved to $REPORT_DIR directory."
 

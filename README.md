@@ -4,9 +4,9 @@
 
 ## Setup
 
-### Install lighthouse-batch
+### Install lighthouse
 
-`npm install -g lighthouse-batch`
+`npm install -g lighthouse`
 
 ### Script permissions
 
