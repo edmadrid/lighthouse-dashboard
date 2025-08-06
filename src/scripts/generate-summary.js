@@ -276,6 +276,7 @@ sortedCategories.forEach(category => {
   summaryHTML += `
   <div id="category-${categoryId}" class="category-section">
     
+    <div class="table-container">
     <table id="table-${categoryId}" class="url-table">
       <tr>
         <th>Page</th>
@@ -376,6 +377,7 @@ sortedCategories.forEach(category => {
   
   summaryHTML += `
     </table>
+    </div>
   </div>
   `;
 });
