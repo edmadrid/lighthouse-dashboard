@@ -34,14 +34,29 @@ console.log(`Found ${jsonReports.length} JSON reports`);
 function sanitizeHTML(text) {
   if (!text) return '';
   
-  // First, escape HTML tags and convert backtick code sections
-  let sanitized = text
-    .replace(/\`([^\`]+)\`/g, (match, codeContent) => {
-      // Pre-escape content inside backticks
-      return `<code>${codeContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`;
-    })
+  // First, handle backtick code sections
+  let sanitized = text.replace(/\`([^\`]+)\`/g, (match, codeContent) => {
+    // Pre-escape content inside backticks
+    return `<code>${codeContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`;
+  });
+  
+  // Preserve existing <code> tags and their content
+  let codeTags = [];
+  sanitized = sanitized.replace(/<code>([^<]*?)<\/code>/g, (match, content) => {
+    const placeholder = `__CODE_PLACEHOLDER_${codeTags.length}__`;
+    codeTags.push(`<code>${content}</code>`);
+    return placeholder;
+  });
+  
+  // Escape other HTML tags
+  sanitized = sanitized
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+  
+  // Restore <code> tags
+  codeTags.forEach((codeTag, index) => {
+    sanitized = sanitized.replace(`__CODE_PLACEHOLDER_${index}__`, codeTag);
+  });
   
   // Convert markdown links
   sanitized = sanitized.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
