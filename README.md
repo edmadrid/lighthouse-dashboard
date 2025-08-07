@@ -20,7 +20,7 @@ chmod +x src/scripts/run-audit.sh
 
 ## Usage
 
-To test sites:
+To test a site, add a JSON file with a list of urls to src/inputs/, then run:
 
 `./run-tests.sh [file1.json file2.json ...]`
 
@@ -46,7 +46,7 @@ Examples:
 Each test will:
 - Test all pages in the specified JSON file(s)
 - Generate individual dashboards (e.g., `dist/ac.html`)
-- Update the tabbed index at `dist/index.html`
+- Update the central dashboard at `dist/index.html`
 
 ## Project Structure
 
@@ -57,7 +57,7 @@ Each test will:
 
 ## Local Development
 
-For live development with CSS changes:
+For optional live development with CSS changes:
 
 ```bash
 npm install        # Install browser-sync locally (optional)
