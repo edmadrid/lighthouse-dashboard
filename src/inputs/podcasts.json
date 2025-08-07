@@ -1,6 +1,14 @@
 {
   "Podcasts": [
     {
+      "url": "https://podcasts.library.columbia.edu/",
+      "title": "Podcasts homepage"
+    },
+    {
+      "url": "https://overdue.podcasts.library.columbia.edu/",
+      "title": "Example podcast front page"
+    },
+    {
       "url": "https://shoeleather.podcasts.library.columbia.edu/podcast/boli/",
       "title": "Episode page"
     },

@@ -3,6 +3,22 @@
     {
       "url": "https://journals.library.columbia.edu",
       "title": "Journals index page"
+    },
+    {
+      "url": "https://journals.library.columbia.edu/index.php/cjum/index",
+      "title": "Example Health Sciences theme front page"
+    },
+    {
+      "url": "https://journals.library.columbia.edu/index.php/cjum/article/view/14079",
+      "title": "Example Health Sciences theme item page"
+    },
+    {
+      "url": "https://journals.library.columbia.edu/index.php/TMR",
+      "title": "Example Bootstrap3 theme front page"
+    },
+    {
+      "url": "https://journals.library.columbia.edu/index.php/TMR/article/view/10376",
+      "title": "Example Bootstrap3 theme item page"
     }
   ]
 }

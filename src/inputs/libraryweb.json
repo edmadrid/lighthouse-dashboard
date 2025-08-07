@@ -5,24 +5,32 @@
       "title": "Front page"
     },
     {
+      "url": "https://library.columbia.edu/libraries/avery.html",
+      "title": "Page with accordion"
+    },
+    {
+      "url": "https://library.columbia.edu/research-teaching.html",
+      "title": "Page with multiple components"
+    },
+    {
+      "url": "https://library.columbia.edu/about/news.html",
+      "title": "News page"
+    },
+    {
       "url": "https://clio.columbia.edu/",
-      "title": "Front page"
+      "title": "CLIO home"
     },
     {
       "url": "https://hours.library.columbia.edu/",
-      "title": "Front page"
-    },
-    {
-      "url": "https://findingaids.library.columbia.edu/",
-      "title": "Front page"
+      "title": "Hours"
     },
     {
       "url": "https://columbiaandslavery.columbia.edu/",
-      "title": "Front page"
+      "title": "Example subsite"
     },
     {
       "url": "https://amesa.library.columbia.edu/",
-      "title": "Front page"
+      "title": "Legacy subsite"
     }
   ]
 }

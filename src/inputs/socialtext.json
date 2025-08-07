@@ -3,6 +3,18 @@
     {
       "url": "https://socialtextjournal.org",
       "title": "Front page"
+    },
+    {
+      "url": "https://socialtextjournal.org/periscope/",
+      "title": "Periscope index"
+    },
+    {
+      "url": "https://socialtextjournal.org/periscope_topic/the-art-of-womens-struggles/",
+      "title": "Topic page"
+    },
+    {
+      "url": "https://socialtextjournal.org/periscope_article/writing-to-resist-writing-to-remember-lumad-youths-narratives-in-the-time-of-duterte/",
+      "title": "Article"
     }
   ]
 }

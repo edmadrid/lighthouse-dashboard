@@ -3,6 +3,22 @@
     {
       "url": "https://wfpp.columbia.edu",
       "title": "Front page"
+    },
+    {
+      "url": "https://wfpp.columbia.edu/pioneers/",
+      "title": "Pioneers index"
+    },
+    {
+      "url": "https://wfpp.columbia.edu/pioneer/ccp-tsuru-aoki/",
+      "title": "Profile page"
+    },
+    {
+      "url": "https://wfpp.columbia.edu/essay/how-women-worked-in-the-us-silent-film-industry/",
+      "title": "Essay"
+    },
+    {
+      "url": "https://wfpp.columbia.edu/about/",
+      "title": "Text page"
     }
   ]
 }
