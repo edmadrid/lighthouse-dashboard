@@ -2,6 +2,12 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/260580f8-e801-48d5-a6e7-13b46ae89211/deploy-status)](https://app.netlify.com/sites/em-accessibility-dash/deploys)
 
+## Requirements
+
+- Node js
+- Lighthouse CLI
+- Chrome browser
+
 ## Setup
 
 ### Install lighthouse
