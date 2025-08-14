@@ -36,11 +36,8 @@ Examples:
 # Test all JSON files in src/inputs/
 ./run-tests.sh
 
-# Test specific sites
+# Test specific sites (with or without file extension)
 ./run-tests.sh ac.json dante.json
-
-# Test specific sites (without .json extension)
-./run-tests.sh ac dante
 
 # List available sites
 ./run-tests.sh --list
