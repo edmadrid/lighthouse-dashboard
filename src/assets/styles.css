@@ -326,6 +326,7 @@ code {
 
 .tab-header h1 a {
   color: var(--color-black);
+  font-weight: normal;
   text-decoration: none;
 }
 
